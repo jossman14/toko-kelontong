@@ -3,10 +3,16 @@
 namespace App\Http\Controllers;
 
 use App\hutang;
+
 use Illuminate\Http\Request;
 
 class HutangController extends Controller
 {
+
+    public function __construct()
+    {
+        $this->hutangModel = new hutang();
+    }
     /**
      * Display a listing of the resource.
      *
@@ -14,7 +20,10 @@ class HutangController extends Controller
      */
     public function index()
     {
-        //
+        $data = hutang::all();
+
+
+        return view('hutang.index', compact('data'));
     }
 
     /**
@@ -24,7 +33,8 @@ class HutangController extends Controller
      */
     public function create()
     {
-        //
+        //mengarah ke halaman tambah hutang
+        return view('hutang.create');
     }
 
     /**
@@ -35,7 +45,11 @@ class HutangController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
+        hutang::create($request->all());
+
+
+        return redirect("/hutang")->with("hasil", "Data hutang Berhasil ditambahkan!");
     }
 
     /**
@@ -57,7 +71,7 @@ class HutangController extends Controller
      */
     public function edit(hutang $hutang)
     {
-        //
+        return view("hutang.edit", compact("hutang"));
     }
 
     /**
@@ -69,7 +83,16 @@ class HutangController extends Controller
      */
     public function update(Request $request, hutang $hutang)
     {
-        //
+
+        hutang::where("id", $hutang->id)
+            ->update([
+                "id_pembeli" => $request->id_pembeli ? $request->id_pembeli : $hutang->id_pembeli,
+                "id_penjualan" => $request->id_penjualan ? $request->id_penjualan : $hutang->id_penjualan,
+                "jumlah_kurang" => $request->jumlah_kurang ? $request->jumlah_kurang : $hutang->jumlah_kurang,
+
+            ]);
+
+        return redirect("/hutang")->with("hasil", "selamat data hutang anda berhasil diedit!");
     }
 
     /**
@@ -80,6 +103,9 @@ class HutangController extends Controller
      */
     public function destroy(hutang $hutang)
     {
-        //
+        // dd($hutang);
+        hutang::destroy($hutang->id);
+        // $data = $this->hutangModel->HapusDatahutang($hutang->id);
+        return redirect("/hutang")->with("hasil", "selamat data anda berhasil dihapus!");
     }
 }

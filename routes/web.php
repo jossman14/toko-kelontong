@@ -13,6 +13,8 @@
 
 use App\Http\Controllers\BarangController;
 use App\Http\Controllers\DetailPenjualanController;
+use App\Http\Controllers\GudangController;
+use App\Http\Controllers\HutangController;
 
 
 // Route::get('/barang', [BarangController::class, 'index'])->name('barang');
@@ -22,4 +24,5 @@ use App\Http\Controllers\DetailPenjualanController;
 Route::resource('/barang', 'BarangController');
 Route::resource('/detail-penjualan', 'DetailPenjualanController');
 Route::resource('/gudang', 'GudangController');
+Route::resource('/hutang', 'HutangController');
 Route::get('/user', 'UserController@home');

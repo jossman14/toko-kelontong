@@ -2,4 +2,12 @@ yg sudah:
 barang
 detail_penjualan
 gudang
+hutang
 
+
+yg belom:
+pembeli
+detail_penjualan
+piutang
+supplier
+user

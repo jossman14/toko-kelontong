@@ -3,10 +3,16 @@
 namespace App\Http\Controllers;
 
 use App\pembeli;
+
 use Illuminate\Http\Request;
 
 class PembeliController extends Controller
 {
+
+    public function __construct()
+    {
+        $this->pembeliModel = new pembeli();
+    }
     /**
      * Display a listing of the resource.
      *
@@ -14,7 +20,10 @@ class PembeliController extends Controller
      */
     public function index()
     {
-        //
+        $data = pembeli::all();
+
+
+        return view('pembeli.index', compact('data'));
     }
 
     /**
@@ -24,7 +33,8 @@ class PembeliController extends Controller
      */
     public function create()
     {
-        //
+        //mengarah ke halaman tambah pembeli
+        return view('pembeli.create');
     }
 
     /**
@@ -35,7 +45,11 @@ class PembeliController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
+        pembeli::create($request->all());
+
+
+        return redirect("/pembeli")->with("hasil", "Data pembeli Berhasil ditambahkan!");
     }
 
     /**
@@ -57,7 +71,7 @@ class PembeliController extends Controller
      */
     public function edit(pembeli $pembeli)
     {
-        //
+        return view("pembeli.edit", compact("pembeli"));
     }
 
     /**
@@ -69,7 +83,16 @@ class PembeliController extends Controller
      */
     public function update(Request $request, pembeli $pembeli)
     {
-        //
+
+        pembeli::where("id", $pembeli->id)
+            ->update([
+                "id_pembeli" => $request->id_pembeli ? $request->id_pembeli : $pembeli->id_pembeli,
+                "id_penjualan" => $request->id_penjualan ? $request->id_penjualan : $pembeli->id_penjualan,
+                "jumlah_kurang" => $request->jumlah_kurang ? $request->jumlah_kurang : $pembeli->jumlah_kurang,
+
+            ]);
+
+        return redirect("/pembeli")->with("hasil", "selamat data pembeli anda berhasil diedit!");
     }
 
     /**
@@ -80,6 +103,9 @@ class PembeliController extends Controller
      */
     public function destroy(pembeli $pembeli)
     {
-        //
+        // dd($pembeli);
+        pembeli::destroy($pembeli->id);
+        // $data = $this->pembeliModel->HapusDatapembeli($pembeli->id);
+        return redirect("/pembeli")->with("hasil", "selamat data anda berhasil dihapus!");
     }
 }
