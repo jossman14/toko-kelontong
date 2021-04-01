@@ -2,9 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\barang;
 use App\detail_penjualan;
-use App\hutang;
 use Illuminate\Http\Request;
 
 class DetailPenjualanController extends Controller
