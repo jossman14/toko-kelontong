@@ -48,7 +48,7 @@ class DetailPenjualanController extends Controller
         detail_penjualan::create($request->all());
 
 
-        return redirect("/detail_penjualan")->with("hasil", "Data detail_penjualan Berhasil ditambahkan!");
+        return redirect("/detail-penjualan")->with("hasil", "Data detail_penjualan Berhasil ditambahkan!");
     }
 
     /**
@@ -93,7 +93,7 @@ class DetailPenjualanController extends Controller
                 "id_penjualan" => $request->id_penjualan ? $request->id_penjualan : $detail_penjualan->id_penjualan,
             ]);
 
-        return redirect("/detail_penjualan")->with("hasil", "selamat data detail_penjualan anda berhasil diedit!");
+        return redirect("/detail-penjualan")->with("hasil", "selamat data detail_penjualan anda berhasil diedit!");
     }
 
     /**
@@ -107,6 +107,6 @@ class DetailPenjualanController extends Controller
         // dd($detail_penjualan);
         detail_penjualan::destroy($detail_penjualan->id);
         // $data = $this->detail_penjualanModel->HapusDatadetail_penjualan($detail_penjualan->id);
-        return redirect("/detail_penjualan")->with("hasil", "selamat data anda berhasil dihapus!");
+        return redirect("/detail-penjualan")->with("hasil", "selamat data anda berhasil dihapus!");
     }
 }

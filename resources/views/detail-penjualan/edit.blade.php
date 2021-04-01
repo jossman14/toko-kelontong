@@ -1,4 +1,5 @@
-@extends('test.layout')
+@extends('test.layout-test')
+
 
 @section('JudulHalaman', "Halaman Tambah Barang")
 
@@ -11,7 +12,7 @@
         {{-- protected $fillable = ['id_pembeli',  'id_barang',  'jumlah_barang', 'jumlah_harga', 'lunas','id_penjualan']; --}}
 
         <div class="mb-3">
-          <label for="id_pembeli" class="form-label">Pembeli</label>
+          <label for="id_pembeli" class="form-label">Id Pembeli</label>
           <input value="{{$detail_penjualan->id_pembeli}}" type="text" class="form-control" id="id_pembeli" aria-describedby="id_pembeli" name="id_pembeli">
         </div>
         <div class="mb-3">

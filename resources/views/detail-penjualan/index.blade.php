@@ -1,4 +1,5 @@
-@extends('test.layout')
+@extends('test.layout-test')
+
 
 @section('JudulHalaman', "Halaman Awal")
 
@@ -42,7 +43,7 @@
     <a class="btn btn-outline-dark" href="{{route("detail-penjualan.edit", $item->id)}}" role="button">Edit</a>
 
 
-    <form action="{{ route("barang.destroy", $item ) }}" method="post"
+    <form action="{{ route("detail-penjualan.destroy", $item ) }}" method="post"
                                         class="d-inline-block" style="margin: 0.4em 0;">
                                         @csrf
                                         @method("delete")
