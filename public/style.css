@@ -1,0 +1,60 @@
+.navbar{
+    padding-bottom: 0;
+    padding-left: 15px;
+}
+
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+    background-color: rgb(231, 231, 231);
+    border-bottom: 2px solid rgb(231, 231, 231);
+}
+.content-cart{
+    padding: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+
+}
+.tab-content{
+    background-color: rgb(231, 231, 231);
+    min-height: 500px;
+}
+.transaksi{
+    min-height: 500px;
+}
+.transaksi li{
+    list-style: none;
+}
+.card-body{
+    color: black;
+}
+.data{
+    margin-left: 10px;
+    border:solid 1px black;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.hasil-cart{
+    color: red;
+    font-weight: 500;
+    padding-top: 20px;
+}
+.transaksi-input{
+    background-color: lightgray;
+    border-radius: 15px;
+}
+.transaksi-input-label{
+    margin-left: 5px;
+}
+.transaksi-input-form{
+    margin-left: 5px;
+    padding-bottom: 5px;
+}
+.transaksi-input .float-end{
+    margin-right: 10px;
+    margin-bottom: 5px;
+}
+.transaksi-input .btn{
+    color: white;
+}
+.transaksi-hasil{
+    color: black;
+}
