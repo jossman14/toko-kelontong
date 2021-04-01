@@ -1,5 +1,12 @@
 {
+<<<<<<< HEAD
     "updateInterval": 1800,
     "logging": true,
     "silent": true
 }
+=======
+  "updateInterval": 1800,
+  "logging": true,
+  "silent": true
+}
+>>>>>>> fed2d8ccdb17f46bab915d21a7265d9351d151b5
