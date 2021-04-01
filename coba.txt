@@ -6,4 +6,5 @@ php artisan make:model gudang -mcr
 php artisan make:model detail_penjualan -mcr
 php artisan make:model barang -mcr
 php artisan make:model admin -mcr
+php artisan make:model admin -mcr
 

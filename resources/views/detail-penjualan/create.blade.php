@@ -5,6 +5,7 @@
 @section('IsiHalaman')
 <div class="container">
     <h1>Tambah Barang</h1>
+    {{-- test --}}
     <form method="POST" action="{{route('detail-penjualan.store')}}">
         @csrf
 
