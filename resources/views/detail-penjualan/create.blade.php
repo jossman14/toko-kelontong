@@ -8,8 +8,6 @@
         <h1>Tambah Barang</h1>
         <form method="POST" action="{{ route('detail-penjualan.store') }}">
             @csrf
-            {{-- test --}}
-
             <div class="mb-3">
                 <label for="id_pembeli" class="form-label">Nama Pembeli</label>
                 <input type="text" class="form-control" id="id_pembeli" aria-describedby="id_pembeli" name="id_pembeli">
