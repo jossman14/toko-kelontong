@@ -43,6 +43,9 @@
               <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="{{route('detail-penjualan.index')}}">Detail Penjualan</a>
               </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="{{route('gudang.index')}}">Gudang</a>
+              </li>
 
             </ul>
           </div>

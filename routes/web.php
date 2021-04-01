@@ -21,4 +21,5 @@ use App\Http\Controllers\DetailPenjualanController;
 
 Route::resource('/barang', 'BarangController');
 Route::resource('/detail-penjualan', 'DetailPenjualanController');
+Route::resource('/gudang', 'GudangController');
 Route::get('/user', 'UserController@home');

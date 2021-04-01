@@ -18,13 +18,9 @@
         <thead>
           <tr>
             <th scope="col">No.</th>
-            <th scope="col">Nama Barang</th>
-            <th scope="col">Harga</th>
-            <th scope="col">Diskon</th>
+            <th scope="col">Id Barang</th>
             <th scope="col">Jumlah Stok</th>
-            <th scope="col">Kadaluarsa</th>
-            <th scope="col">Supplier</th>
-            <th scope="col">Edit</th>
+
 
           </tr>
         </thead>
@@ -33,12 +29,9 @@
             <tr>
                 <th scope="row">{{ $loop->iteration }}</th>
 
-                <td>{{$item->id_pembeli}}</td>
                 <td>{{$item->id_barang}}</td>
                 <td>{{$item->jumlah_barang}}</td>
-                <td>{{$item->jumlah_harga}}</td>
-                <td>{{$item->lunas}}</td>
-                <td>{{$item->id_penjualan}}</td>
+
                 <td>
     <a class="btn btn-outline-dark" href="{{route("gudang.edit", $item->id)}}" role="button">Edit</a>
 

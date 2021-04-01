@@ -3,10 +3,16 @@
 namespace App\Http\Controllers;
 
 use App\gudang;
+
 use Illuminate\Http\Request;
 
 class GudangController extends Controller
 {
+
+    public function __construct()
+    {
+        $this->gudangModel = new gudang();
+    }
     /**
      * Display a listing of the resource.
      *
@@ -14,7 +20,10 @@ class GudangController extends Controller
      */
     public function index()
     {
-        //
+        $data = gudang::all();
+
+
+        return view('gudang.index', compact('data'));
     }
 
     /**
@@ -24,7 +33,8 @@ class GudangController extends Controller
      */
     public function create()
     {
-        //
+        //mengarah ke halaman tambah gudang
+        return view('gudang.create');
     }
 
     /**
@@ -35,7 +45,11 @@ class GudangController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
+        gudang::create($request->all());
+
+
+        return redirect("/gudang")->with("hasil", "Data gudang Berhasil ditambahkan!");
     }
 
     /**
@@ -57,7 +71,7 @@ class GudangController extends Controller
      */
     public function edit(gudang $gudang)
     {
-        //
+        return view("gudang.edit", compact("gudang"));
     }
 
     /**
@@ -69,7 +83,18 @@ class GudangController extends Controller
      */
     public function update(Request $request, gudang $gudang)
     {
-        //
+
+        gudang::where("id", $gudang->id)
+            ->update([
+                "id_pembeli" => $request->id_pembeli ? $request->id_pembeli : $gudang->id_pembeli,
+                "id_barang" => $request->id_barang ? $request->id_barang : $gudang->id_barang,
+                "jumlah_barang" => $request->jumlah_barang ? $request->jumlah_barang : $gudang->jumlah_barang,
+                "jumlah_harga" => $request->jumlah_harga ? $request->jumlah_harga : $gudang->jumlah_harga,
+                "lunas" => $request->lunas ? $request->lunas : $gudang->lunas,
+                "id_penjualan" => $request->id_penjualan ? $request->id_penjualan : $gudang->id_penjualan,
+            ]);
+
+        return redirect("/gudang")->with("hasil", "selamat data gudang anda berhasil diedit!");
     }
 
     /**
@@ -80,6 +105,9 @@ class GudangController extends Controller
      */
     public function destroy(gudang $gudang)
     {
-        //
+        // dd($gudang);
+        gudang::destroy($gudang->id);
+        // $data = $this->gudangModel->HapusDatagudang($gudang->id);
+        return redirect("/gudang")->with("hasil", "selamat data anda berhasil dihapus!");
     }
 }
