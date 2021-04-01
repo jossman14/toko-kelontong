@@ -1,0 +1,5 @@
+yg sudah:
+barang
+detail_penjualan
+gudang
+

@@ -1,0 +1,22 @@
+-------------------- Auto-Git Log --------------------
+		Thu Apr 01 2021 11:56:27 GMT+0700 (Waktu Indonesia Barat)
+------------------------------------------------------
+
+Modified files:
+* app/Http/Controllers/GudangController.php
+* app/gudang.php
+* resources/views/detail-penjualan/index.blade.php
+* resources/views/test/layout-test.blade.php
+* routes/web.php
+
+
+Created files:
+* resources/views/gudang/create.blade.php
+* resources/views/gudang/edit.blade.php
+* resources/views/gudang/index.blade.php
+
+
+Deleted files:
+
+
+Renamed files:

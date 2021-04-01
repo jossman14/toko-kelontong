@@ -6,7 +6,7 @@
 @section('IsiHalaman')
 <div class="container">
     <h1>Tambah Barang</h1>
-    <form method="POST" action="{{route('detail-penjualan.update', $detail_penjualan)}}">
+    <form method="POST" action="{{route('gudang.update', $detail_penjualan)}}">
         @csrf
         @method("patch")
         {{-- protected $fillable = ['id_pembeli',  'id_barang',  'jumlah_barang', 'jumlah_harga', 'lunas','id_penjualan']; --}}

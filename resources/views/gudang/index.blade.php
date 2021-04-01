@@ -20,7 +20,7 @@
             <th scope="col">No.</th>
             <th scope="col">Id Barang</th>
             <th scope="col">Jumlah Stok</th>
-
+            <th>Action</th>
 
           </tr>
         </thead>
@@ -31,6 +31,7 @@
 
                 <td>{{$item->id_barang}}</td>
                 <td>{{$item->jumlah_barang}}</td>
+
 
                 <td>
     <a class="btn btn-outline-dark" href="{{route("gudang.edit", $item->id)}}" role="button">Edit</a>

@@ -85,13 +85,8 @@ class GudangController extends Controller
     {
 
         gudang::where("id", $gudang->id)
-            ->update([
-                "id_pembeli" => $request->id_pembeli ? $request->id_pembeli : $gudang->id_pembeli,
-                "id_barang" => $request->id_barang ? $request->id_barang : $gudang->id_barang,
-                "jumlah_barang" => $request->jumlah_barang ? $request->jumlah_barang : $gudang->jumlah_barang,
-                "jumlah_harga" => $request->jumlah_harga ? $request->jumlah_harga : $gudang->jumlah_harga,
-                "lunas" => $request->lunas ? $request->lunas : $gudang->lunas,
-                "id_penjualan" => $request->id_penjualan ? $request->id_penjualan : $gudang->id_penjualan,
+            ->update(["id_barang" => $request->id_barang ? $request->id_barang : $gudang->id_barang, "jumlah_barang" => $request->jumlah_barang ? $request->jumlah_barang : $gudang->jumlah_barang,
+
             ]);
 
         return redirect("/gudang")->with("hasil", "selamat data gudang anda berhasil diedit!");
