@@ -88,7 +88,7 @@ class DetailPenjualanController extends Controller
                 "id_pembeli" => $request->id_pembeli ? $request->id_pembeli : $detail_penjualan->id_pembeli,
                 "id_barang" => $request->id_barang ? $request->id_barang : $detail_penjualan->id_barang,
                 "jumlah_barang" => $request->jumlah_barang ? $request->jumlah_barang : $detail_penjualan->jumlah_barang,
-                "jumlah_id_barang" => $request->jumlah_id_barang ? $request->jumlah_id_barang : $detail_penjualan->jumlah_id_barang,
+            "jumlah_harga" => $request->jumlah_harga ? $request->jumlah_harga : $detail_penjualan->jumlah_harga,
                 "lunas" => $request->lunas ? $request->lunas : $detail_penjualan->lunas,
                 "id_penjualan" => $request->id_penjualan ? $request->id_penjualan : $detail_penjualan->id_penjualan,
             ]);
