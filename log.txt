@@ -3,11 +3,11 @@ barang
 detail_penjualan
 gudang
 hutang
+pembeli
+penjualan
+piutang
+supplier
 
 
 yg belom:
-pembeli
-detail_penjualan
-piutang
-supplier
 user

@@ -1,0 +1,29 @@
+
+
+@extends('test.layout-test')
+
+
+@section('JudulHalaman', "Halaman Tambah Barang")
+
+@section('IsiHalaman')
+<div class="container">
+    <h1>Tambah Barang</h1>
+    <form method="POST" action="{{route('penjualan.update', $penjualan)}}">
+        @csrf
+        @method("patch")
+        {{-- protected $fillable = ['id_pembeli',  'jumlah_total', 'no_hp']; --}}
+
+        <div class="mb-3">
+          <label for="id_pembeli" class="form-label">id_pembeli</label>
+          <input value="{{$penjualan->id_pembeli}}" type="text" class="form-control" id="id_pembeli" aria-describedby="id_pembeli" name="id_pembeli">
+        </div>
+        <div class="mb-3">
+          <label for="jumlah_total" class="form-label">jumlah_total</label>
+          <input value="{{$penjualan->jumlah_total}}" type="text" class="form-control" id="jumlah_total" aria-describedby="jumlah_total" name="jumlah_total">
+        </div>
+
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+</div>
+@endsection

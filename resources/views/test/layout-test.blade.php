@@ -49,6 +49,18 @@
               <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="{{route('hutang.index')}}">Hutang</a>
               </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="{{route('pembeli.index')}}">Pembeli</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="{{route('penjualan.index')}}">penjualan</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="{{route('piutang.index')}}">piutang</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="{{route('supplier.index')}}">supplier</a>
+              </li>
 
             </ul>
           </div>

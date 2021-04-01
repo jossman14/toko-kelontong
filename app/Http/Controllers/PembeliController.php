@@ -86,9 +86,9 @@ class PembeliController extends Controller
 
         pembeli::where("id", $pembeli->id)
             ->update([
-                "id_pembeli" => $request->id_pembeli ? $request->id_pembeli : $pembeli->id_pembeli,
-                "id_penjualan" => $request->id_penjualan ? $request->id_penjualan : $pembeli->id_penjualan,
-                "jumlah_kurang" => $request->jumlah_kurang ? $request->jumlah_kurang : $pembeli->jumlah_kurang,
+                "nama" => $request->nama ? $request->nama : $pembeli->nama,
+                "alamat" => $request->alamat ? $request->alamat : $pembeli->alamat,
+                "no_hp" => $request->no_hp ? $request->no_hp : $pembeli->no_hp,
 
             ]);
 

@@ -3,10 +3,16 @@
 namespace App\Http\Controllers;
 
 use App\piutang;
+
 use Illuminate\Http\Request;
 
 class PiutangController extends Controller
 {
+
+    public function __construct()
+    {
+        $this->piutangModel = new piutang();
+    }
     /**
      * Display a listing of the resource.
      *
@@ -14,7 +20,10 @@ class PiutangController extends Controller
      */
     public function index()
     {
-        //
+        $data = piutang::all();
+
+
+        return view('piutang.index', compact('data'));
     }
 
     /**
@@ -24,7 +33,8 @@ class PiutangController extends Controller
      */
     public function create()
     {
-        //
+        //mengarah ke halaman tambah piutang
+        return view('piutang.create');
     }
 
     /**
@@ -35,7 +45,11 @@ class PiutangController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
+        piutang::create($request->all());
+
+
+        return redirect("/piutang")->with("hasil", "Data piutang Berhasil ditambahkan!");
     }
 
     /**
@@ -57,7 +71,7 @@ class PiutangController extends Controller
      */
     public function edit(piutang $piutang)
     {
-        //
+        return view("piutang.edit", compact("piutang"));
     }
 
     /**
@@ -69,7 +83,16 @@ class PiutangController extends Controller
      */
     public function update(Request $request, piutang $piutang)
     {
-        //
+
+        piutang::where("id", $piutang->id)
+            ->update([
+                "id_pembeli" => $request->id_pembeli ? $request->id_pembeli : $piutang->id_pembeli,
+                "id_penjualan" => $request->id_penjualan ? $request->id_penjualan : $piutang->id_penjualan,
+                "jumlah_bayar" => $request->jumlah_bayar ? $request->jumlah_bayar : $piutang->jumlah_bayar,
+
+            ]);
+
+        return redirect("/piutang")->with("hasil", "selamat data piutang anda berhasil diedit!");
     }
 
     /**
@@ -80,6 +103,9 @@ class PiutangController extends Controller
      */
     public function destroy(piutang $piutang)
     {
-        //
+        // dd($piutang);
+        piutang::destroy($piutang->id);
+        // $data = $this->piutangModel->HapusDatapiutang($piutang->id);
+        return redirect("/piutang")->with("hasil", "selamat data anda berhasil dihapus!");
     }
 }

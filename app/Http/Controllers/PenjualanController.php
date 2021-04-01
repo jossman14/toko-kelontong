@@ -3,10 +3,16 @@
 namespace App\Http\Controllers;
 
 use App\penjualan;
+
 use Illuminate\Http\Request;
 
 class PenjualanController extends Controller
 {
+
+    public function __construct()
+    {
+        $this->penjualanModel = new penjualan();
+    }
     /**
      * Display a listing of the resource.
      *
@@ -14,7 +20,10 @@ class PenjualanController extends Controller
      */
     public function index()
     {
-        //
+        $data = penjualan::all();
+
+
+        return view('penjualan.index', compact('data'));
     }
 
     /**
@@ -24,7 +33,8 @@ class PenjualanController extends Controller
      */
     public function create()
     {
-        //
+        //mengarah ke halaman tambah penjualan
+        return view('penjualan.create');
     }
 
     /**
@@ -35,7 +45,11 @@ class PenjualanController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
+        penjualan::create($request->all());
+
+
+        return redirect("/penjualan")->with("hasil", "Data penjualan Berhasil ditambahkan!");
     }
 
     /**
@@ -57,7 +71,7 @@ class PenjualanController extends Controller
      */
     public function edit(penjualan $penjualan)
     {
-        //
+        return view("penjualan.edit", compact("penjualan"));
     }
 
     /**
@@ -69,7 +83,15 @@ class PenjualanController extends Controller
      */
     public function update(Request $request, penjualan $penjualan)
     {
-        //
+
+        penjualan::where("id", $penjualan->id)
+            ->update([
+                "id_pembeli" => $request->id_pembeli ? $request->id_pembeli : $penjualan->id_pembeli,
+                "jumlah_total" => $request->jumlah_total ? $request->jumlah_total : $penjualan->jumlah_total,
+
+            ]);
+
+        return redirect("/penjualan")->with("hasil", "selamat data penjualan anda berhasil diedit!");
     }
 
     /**
@@ -80,6 +102,9 @@ class PenjualanController extends Controller
      */
     public function destroy(penjualan $penjualan)
     {
-        //
+        // dd($penjualan);
+        penjualan::destroy($penjualan->id);
+        // $data = $this->penjualanModel->HapusDatapenjualan($penjualan->id);
+        return redirect("/penjualan")->with("hasil", "selamat data anda berhasil dihapus!");
     }
 }
