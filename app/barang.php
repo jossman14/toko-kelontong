@@ -25,4 +25,9 @@ class barang extends Model
     {
         return DB::table('barangs')->when("id", $data)->delete($data);
     }
+
+    public function supplier()
+    {
+        return $this->hasOne('App\supplier', 'id_supplier', 'id');
+    }
 }
