@@ -10,8 +10,7 @@
         <div class="left-custom-menu-adp-wrap">
             <ul class="nav navbar-nav left-sidebar-menu-pro">
                 <li class="nav-item">
-                    <a href="{{ route('home') }}" data-toggle="dropdown" role="button" aria-expanded="false"
-                        class="nav-link dropdown-toggle">
+                    <a href="/user/transaksi" role="button" aria-expanded="false" class="nav-link dropdown-toggle">
                         <i class="fa big-icon fa-home"></i>
                         <span class="mini-dn">Home</span>
                     </a>
@@ -33,15 +32,14 @@
                     </div>
                 </li>
                 <li class="nav-item">
-                    <a href="{{ route('transaksi') }}" data-toggle="dropdown" role="button" aria-expanded="false"
+                    <a href="{{ route('transaksi') }}" role="button" aria-expanded="false"
                         class="nav-link dropdown-toggle">
                         <i class="fa big-icon fa-cart-plus"></i>
                         <span class="mini-dn">Transaksi Penjualan</span>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="#" data-toggle="dropdown" role="button" aria-expanded="false"
-                        class="nav-link dropdown-toggle">
+                    <a href="#" role="button" aria-expanded="false" class="nav-link dropdown-toggle">
                         <i class="fa big-icon fa-shopping-basket"></i>
                         <span class="mini-dn">Transaksi Pembelian</span>
                     </a>

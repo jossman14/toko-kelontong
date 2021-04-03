@@ -33,7 +33,6 @@ Route::resource('/pembeli', 'PembeliController');
 Route::resource('/penjualan', 'PenjualanController');
 Route::resource('/piutang', 'PiutangController');
 Route::resource('/supplier', 'SupplierController');
-Route::get('/user', 'UserController@home');
 Route::get('/', 'BarangController@index');
 
 Route::get('/user', 'UserController@home')->name('home');
