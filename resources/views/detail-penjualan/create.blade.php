@@ -6,33 +6,34 @@
 @section('IsiHalaman')
 <div class="container">
     <h1>Tambah Barang</h1>
-    <form method="POST" action="{{route('barang.store')}}">
+    <form method="POST" action="{{route('detail-penjualan.store')}}">
         @csrf
+        protected $fillable = ['id_pembeli',  'id_barang',  'jumlah_barang', 'jumlah_harga', 'lunas','id_penjualan'];
 
 
         <div class="mb-3">
-          <label for="nama_barang" class="form-label">Nama Barang</label>
-          <input type="text" class="form-control" id="nama_barang" aria-describedby="nama_barang" name="nama_barang">
+          <label for="id_pembeli" class="form-label">id_pembeli</label>
+          <input type="text" class="form-control" id="id_pembeli" aria-describedby="id_pembeli" name="id_pembeli">
         </div>
         <div class="mb-3">
-          <label for="harga" class="form-label">Harga</label>
-          <input type="text" class="form-control" id="harga" aria-describedby="harga" name="harga">
+          <label for="id_barang" class="form-label">id_barang</label>
+          <input type="text" class="form-control" id="id_barang" aria-describedby="id_barang" name="id_barang">
         </div>
         <div class="mb-3">
-          <label for="diskon" class="form-label">Diskon</label>
-          <input type="text" class="form-control" id="diskon" aria-describedby="diskon" name="diskon">
+          <label for="jumlah_barang" class="form-label">jumlah_barang</label>
+          <input type="text" class="form-control" id="jumlah_barang" aria-describedby="jumlah_barang" name="jumlah_barang">
         </div>
         <div class="mb-3">
-          <label for="jumlah_stok" class="form-label">Jumlah Stok</label>
-          <input type="text" class="form-control" id="jumlah_stok" aria-describedby="jumlah_stok" name="jumlah_stok">
+          <label for="jumlah_harga" class="form-label">jumlah_harga</label>
+          <input type="text" class="form-control" id="jumlah_harga" aria-describedby="jumlah_harga" name="jumlah_harga">
         </div>
         <div class="mb-3">
-          <label for="kadaluarsa" class="form-label">Kadaluarsa</label>
-          <input type="text" class="form-control" id="kadaluarsa" aria-describedby="kadaluarsa" name="kadaluarsa">
+          <label for="lunas" class="form-label">lunas</label>
+          <input type="text" class="form-control" id="lunas" aria-describedby="lunas" name="lunas">
         </div>
         <div class="mb-3">
-          <label for="id_supplier" class="form-label">Supplier</label>
-          <input type="text" class="form-control" id="id_supplier" aria-describedby="id_supplier" name="id_supplier">
+          <label for="id_penjualan" class="form-label">id_penjualan</label>
+          <input type="text" class="form-control" id="id_penjualan" aria-describedby="id_penjualan" name="id_penjualan">
         </div>
 
         <button type="submit" class="btn btn-primary">Submit</button>
