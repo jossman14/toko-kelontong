@@ -64,11 +64,8 @@
                                                 <td class="button-style-three">
                                                     <div class="button-ap-list responsive-btn">
                                                         <div class="btn-group btn-custom-groups">
-                                                            <button type="button" class="btn btn-primary">Default</button>
-                                                            <button type="button" class="btn btn-primary">Primary</button>
-                                                            <button type="button" class="btn btn-primary">Success</button>
-                                                            <button type="button" class="btn btn-primary">Warning</button>
-                                                            <button type="button" class="btn btn-primary">Danger</button>
+                                                            <button type="button" class="btn btn-primary">Edit</button>
+                                                            <button type="button" class="btn btn-primary">Delete</button>
                                                         </div>
                                                     </div>
                                                     <a class="btn btn-custon-rounded-three btn-success"
