@@ -58,7 +58,7 @@
                                         @foreach ($data as $item)
                                             <tr>
                                                 <td></td>
-                                                <th scope="row">{{ $loop->iteration }}</th>
+                                                <td scope="row">{{ $loop->iteration }}</td>
                                                 <td>{{ $item->nama_barang }}</td>
                                                 <td>{{ $item->harga }}</td>
                                                 <td>{{ $item->diskon }}</td>
