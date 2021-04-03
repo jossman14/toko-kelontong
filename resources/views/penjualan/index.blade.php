@@ -30,7 +30,7 @@
             <tr>
                 <th scope="row">{{ $loop->iteration }}</th>
 
-                <td>{{$item->id_pembeli}}</td>
+                <td>{{$item->pembeli->nama}}</td>
                 <td>{{$item->jumlah_total}}</td>
 
 

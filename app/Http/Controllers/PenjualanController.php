@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\pembeli;
 use App\penjualan;
 
 use Illuminate\Http\Request;
@@ -36,6 +37,7 @@ class PenjualanController extends Controller
     public function create()
     {
         //mengarah ke halaman tambah penjualan
+        $pembeli = pembeli::all();
         return view('penjualan.create');
     }
 
