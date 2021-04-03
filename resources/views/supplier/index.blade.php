@@ -64,7 +64,14 @@
                                                 <td class="button-style-three">
                                                     <div class="button-ap-list responsive-btn">
                                                         <div class="btn-group btn-custom-groups">
-                                                            <button type="button" class="btn btn-primary">Edit</button>
+                                                            <a href="{{ route('supplier.edit', $item->id) }}"
+                                                                role="button">
+                                                                <button type="button" class="btn btn-primary">
+                                                                    Edit
+                                                                    <i class="fa fa-edit"></i>
+                                                                </button>
+                                                            </a>
+
                                                             <button type="button" class="btn btn-primary">Delete</button>
                                                         </div>
                                                     </div>
