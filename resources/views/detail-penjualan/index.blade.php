@@ -13,7 +13,7 @@
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
       </div>
 @endif
-    <a class="btn btn-primary" href="{{route("barang.create")}}" role="button">Tambah Barang</a>
+    <a class="btn btn-primary" href="{{route("detail-penjualan.create")}}" role="button">Tambah Barang</a>
     <table class="table">
         <thead>
           <tr>
@@ -40,10 +40,10 @@
                 <td>{{$item->kadaluarsa}}</td>
                 <td>{{$item->id_supplier}}</td>
                 <td>
-    <a class="btn btn-outline-dark" href="{{route("barang.edit", $item->id)}}" role="button">Edit</a>
+    <a class="btn btn-outline-dark" href="{{route("detail-penjualan.edit", $item->id)}}" role="button">Edit</a>
 
 
-    <form action="{{ route("barang.destroy", $item ) }}" method="post"
+    <form action="{{ route("detail-penjualan.destroy", $item ) }}" method="post"
                                         class="d-inline-block" style="margin: 0.4em 0;">
                                         @csrf
                                         @method("delete")
