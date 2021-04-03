@@ -36,25 +36,29 @@
                                         <option value="selected">Export Selected</option>
                                     </select>
                                 </div>
-                                <table class="table">
+                                <table id="table" data-toggle="table" data-pagination="true" data-search="true"
+                                    data-show-columns="true" data-show-pagination-switch="true" data-show-refresh="true"
+                                    data-key-events="true" data-show-toggle="true" data-resizable="true" data-cookie="true"
+                                    data-cookie-id-table="saveId" data-show-export="true" data-click-to-select="true"
+                                    data-toolbar="#toolbar">
                                     <thead>
                                         <tr>
-                                            <th scope="col">No.</th>
-                                            <th scope="col">Nama Barang</th>
-                                            <th scope="col">Harga</th>
-                                            <th scope="col">Diskon</th>
-                                            <th scope="col">Jumlah Stok</th>
-                                            <th scope="col">Kadaluarsa</th>
-                                            <th scope="col">Supplier</th>
-                                            <th scope="col">Edit</th>
-
+                                            <th data-field="state" data-checkbox="true"></th>
+                                            <th data-field="id">No.</th>
+                                            <th data-field="company" data-editable="true">Nama Barang</th>
+                                            <th data-field="company" data-editable="true">Harga</th>
+                                            <th data-field="company" data-editable="true">Diskon</th>
+                                            <th data-field="company" data-editable="true">Jumlah Stok</th>
+                                            <th data-field="company" data-editable="true">Kadaluarsa</th>
+                                            <th data-field="company" data-editable="true">Supplier</th>
+                                            <th data-field="action">Action</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         @foreach ($data as $item)
                                             <tr>
+                                                <td></td>
                                                 <th scope="row">{{ $loop->iteration }}</th>
-
                                                 <td>{{ $item->nama_barang }}</td>
                                                 <td>{{ $item->harga }}</td>
                                                 <td>{{ $item->diskon }}</td>
@@ -77,7 +81,7 @@
                                                                 @method("delete")
                                                                 <button type="submit" class="btn btn-primary"
                                                                     onclick="return confirm('apakah anda yakin menghapus barang {{ $item->nama_barang }}?');"><a
-                                                                        href="{{ route('supplier.edit', $item->id) }}"
+                                                                        href="{{ route('Barang.edit', $item->id) }}"
                                                                         role="button"></a>
                                                                     <i class="fa fa-trash"></i>
                                                                 </button>
@@ -87,7 +91,6 @@
                                                 </td>
                                             </tr>
                                         @endforeach
-
                                     </tbody>
                                 </table>
                             </div>

@@ -45,10 +45,12 @@
                                         <tr>
                                             <th data-field="state" data-checkbox="true"></th>
                                             <th data-field="id">No.</th>
-                                            <th data-field="name" data-editable="true">Nama Supplier</th>
-                                            <th data-field="email" data-editable="true">alamat</th>
-                                            <th data-field="phone" data-editable="true">no_hp</th>
-                                            <th data-field="company" data-editable="true">catatan</th>
+                                            <th data-field="company" data-editable="true">Nama Barang</th>
+                                            <th data-field="company" data-editable="true">Harga</th>
+                                            <th data-field="company" data-editable="true">Diskon</th>
+                                            <th data-field="company" data-editable="true">Jumlah Stok</th>
+                                            <th data-field="company" data-editable="true">Kadaluarsa</th>
+                                            <th data-field="company" data-editable="true">Supplier</th>
                                             <th data-field="action">Action</th>
                                         </tr>
                                     </thead>
@@ -56,28 +58,30 @@
                                         @foreach ($data as $item)
                                             <tr>
                                                 <td></td>
-                                                <td scope="row">{{ $loop->iteration }}</td>
-                                                <td>{{ $item->nama_supplier }}</td>
-                                                <td>{{ $item->alamat }}</td>
-                                                <td>{{ $item->no_hp }}</td>
-                                                <td>{{ $item->catatan }}</td>
+                                                <th scope="row">{{ $loop->iteration }}</th>
+                                                <td>{{ $item->nama_barang }}</td>
+                                                <td>{{ $item->harga }}</td>
+                                                <td>{{ $item->diskon }}</td>
+                                                <td>{{ $item->jumlah_stok }}</td>
+                                                <td>{{ $item->kadaluarsa }}</td>
+                                                <td>{{ $item->id_supplier }}</td>
                                                 <td class="button-style-three">
                                                     <div class="button-ap-list responsive-btn">
                                                         <div class="btn-group btn-custom-groups">
                                                             <button type="button" class="btn btn-primary">
-                                                                <a href="{{ route('supplier.edit', $item->id) }}"
+                                                                <a href="{{ route('barang.edit', $item->id) }}"
                                                                     role="button"></a>
                                                                 <i class="fa fa-edit"></i>
                                                             </button>
 
-                                                            <form action="{{ route('supplier.destroy', $item) }}"
+                                                            <form action="{{ route('barang.destroy', $item) }}"
                                                                 method="post" class="d-inline-block"
                                                                 style="margin: 0.4em 0;">
                                                                 @csrf
                                                                 @method("delete")
                                                                 <button type="submit" class="btn btn-primary"
                                                                     onclick="return confirm('apakah anda yakin menghapus barang {{ $item->nama_barang }}?');"><a
-                                                                        href="{{ route('supplier.edit', $item->id) }}"
+                                                                        href="{{ route('Barang.edit', $item->id) }}"
                                                                         role="button"></a>
                                                                     <i class="fa fa-trash"></i>
                                                                 </button>
