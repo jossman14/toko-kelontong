@@ -33,7 +33,7 @@
                     </div>
                 </li>
                 <li class="nav-item">
-                    <a href="{{ route('penjualan') }}" role="button" aria-expanded="false"
+                    <a href="{{ route('penjualan.index') }}" role="button" aria-expanded="false"
                         class="nav-link dropdown-toggle">
                         <i class="fa big-icon fa-cart-plus"></i>
                         <span class="mini-dn">Transaksi Penjualan</span>
