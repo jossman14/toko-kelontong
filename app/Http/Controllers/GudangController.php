@@ -72,10 +72,12 @@ class GudangController extends Controller
      */
     public function edit(gudang $gudang)
     {
-        return view("gudang.edit", compact("gudang"));
+        $barang = barang::all();
+
+        return view("gudang.edit", compact("gudang", "barang"));
     }
 
-    /**
+    /** 
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
