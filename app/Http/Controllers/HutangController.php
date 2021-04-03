@@ -74,7 +74,9 @@ class HutangController extends Controller
      */
     public function edit(hutang $hutang)
     {
-        return view("hutang.edit", compact("hutang"));
+        $pembeli = pembeli::all();
+        $penjualan = penjualan::all();
+        return view('hutang.edit', compact('pembeli', 'penjualan', "hutang"));
     }
 
     /**
