@@ -64,23 +64,24 @@
                                                 <td class="button-style-three">
                                                     <div class="button-ap-list responsive-btn">
                                                         <div class="btn-group btn-custom-groups">
-                                                            <a href="{{ route('supplier.edit', $item->id) }}"
-                                                                role="button">
-                                                                <button type="button" class="btn btn-primary">
-                                                                    Edit
-                                                                    <i class="fa fa-edit"></i>
-                                                                </button>
-                                                            </a>
+
+                                                            <button type="button" class="btn btn-primary">
+                                                                <a href="{{ route('supplier.edit', $item->id) }}"
+                                                                    role="button">Edit</a>
+                                                                <i class="fa fa-edit"></i>
+                                                            </button>
+
                                                             <form action="{{ route('supplier.destroy', $item) }}"
                                                                 method="post" class="d-inline-block"
                                                                 style="margin: 0.4em 0;">
                                                                 @csrf
                                                                 @method("delete")
-                                                                <a href="{{ route('supplier.edit', $item->id) }}"
-                                                                    role="button"></a>
-
                                                                 <button type="submit" class="btn btn-primary"
-                                                                    onclick="return confirm('apakah anda yakin menghapus barang {{ $item->nama_barang }}?');">Delete
+                                                                    onclick="return confirm('apakah anda yakin menghapus barang {{ $item->nama_barang }}?');"><a
+                                                                        href="{{ route('supplier.edit', $item->id) }}"
+                                                                        role="button"></a>
+
+                                                                    Delete
                                                                 </button>
                                                             </form>
 
