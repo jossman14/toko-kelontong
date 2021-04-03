@@ -100,26 +100,14 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr>
-                                            <td></td>
-                                            <td>1</td>
-                                            <td>Web Development</td>
-                                            <td>admin@uttara.com</td>
-                                            <td>+8801962067309</td>
-                                            <td>$5455</td>
-                                            <td class="datatable-ct"><i class="fa fa-check"></i>
-                                            </td>
-                                        </tr>
                                         @foreach ($data as $item)
                                             <tr>
+                                                <td></td>
                                                 <th scope="row">{{ $loop->iteration }}</th>
-
                                                 <td>{{ $item->nama_supplier }}</td>
                                                 <td>{{ $item->alamat }}</td>
                                                 <td>{{ $item->no_hp }}</td>
                                                 <td>{{ $item->catatan }}</td>
-
-
                                                 <td>
                                                     <a class="btn btn-outline-dark"
                                                         href="{{ route('supplier.edit', $item->id) }}"
