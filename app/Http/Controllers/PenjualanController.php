@@ -20,7 +20,9 @@ class PenjualanController extends Controller
      */
     public function index()
     {
-        $data = penjualan::all();
+        // $data = penjualan::all();
+        $data = penjualan::with("pembeli")->get();
+
 
 
         return view('penjualan.index', compact('data'));

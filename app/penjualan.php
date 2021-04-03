@@ -16,4 +16,9 @@ class penjualan extends Model
     {
         return $this->belongsTo('App\detail_penjualan', 'id_penjualan', 'id');
     }
+
+    public function pembeli()
+    {
+        return $this->hasOne('App\pembeli', 'id', 'id_pembeli');
+    }
 }

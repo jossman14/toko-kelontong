@@ -10,14 +10,29 @@
             @csrf
 
 
-            <div class="mb-3">
-                <label for="id_pembeli" class="form-label">Id pembeli</label>
-                <input type="text" class="form-control" id="id_pembeli" aria-describedby="id_pembeli" name="id_pembeli">
-            </div>
-            <div class="mb-3">
+
+
+            <select class="form-select my-4" id="id_pembeli" aria-describedby="id_pembeli" name="id_pembeli">
+                <option selected>Pilih Pembeli</option>
+                @foreach ($pembeli as $item)
+                <option value="{{$item->id}}">{{$item->nama}}</option>
+                @endforeach
+
+              </select>
+
+            {{-- <div class="mb-3">
                 <label for="id_penjualan" class="form-label">id penjualan</label>
                 <input type="text" class="form-control" id="id_penjualan" aria-describedby="id_penjualan" name="id_penjualan">
-            </div>
+            </div> --}}
+
+            <select class="form-select my-4" id="id_penjualan" aria-describedby="id_penjualan" name="id_penjualan">
+                <option selected>Pilih Penjualan</option>
+                @foreach ($penjualan as $item)
+                <option value="{{$item->id}}">{{$item->id_pembeli}}</option>
+                @endforeach
+
+              </select>
+
             <div class="mb-3">
                 <label for="jumlah_kurang" class="form-label">jumlhah kurang</label>
                 <input type="text" class="form-control" id="jumlah_kurang" aria-describedby="jumlah_kurang" name="jumlah_kurang">
