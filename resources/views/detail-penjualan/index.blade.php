@@ -35,7 +35,7 @@
                 <th scope="row">{{ $loop->iteration }}</th>
 
                 <td>{{$item->pembeli->nama}}</td>
-                <td>{{$item->barang->nama_barang}}</td>
+                <td>{{$item->id_barang}}</td>
                 <td>{{$item->jumlah_barang}}</td>
                 <td>{{$item->jumlah_harga}}</td>
                 <td>{{$item->lunas}}</td>

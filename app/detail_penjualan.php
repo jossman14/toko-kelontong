@@ -22,6 +22,6 @@ class detail_penjualan extends Model
     }
     public function penjualan()
     {
-        return $this->hasOne('App\barang', 'id', 'id_penjualan');
+        return $this->hasOne('App\penjualan', 'id', 'id_penjualan');
     }
 }

@@ -21,7 +21,7 @@ class DetailPenjualanController extends Controller
     {
         $data = detail_penjualan::with("barang", "penjualan", "pembeli")->get();
 
-        // dd($data->all());
+        // dd($data->all());    
 
         return view('detail-penjualan.index', compact('data'));
     }
