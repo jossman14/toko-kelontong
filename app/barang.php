@@ -35,4 +35,9 @@ class barang extends Model
     {
         return $this->belongsTo('App\detail_penjualan', 'id_barang', 'id');
     }
+
+    public function gudang()
+    {
+        return $this->belongsTo('App\detail_penjualan', 'id_barang', 'id');
+    }
 }

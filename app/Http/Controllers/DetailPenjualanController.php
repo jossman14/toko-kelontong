@@ -40,7 +40,7 @@ class DetailPenjualanController extends Controller
         $pembeli = pembeli::all();
         $barang = barang::all();
         $penjualan = penjualan::all();
-        return view('detail-penjualan.create');
+        return view('detail-penjualan.create', compact('pembeli', 'barang', 'penjualan'));
     }
 
     /**

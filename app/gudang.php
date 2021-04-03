@@ -11,4 +11,9 @@ class gudang extends Model
     protected $table = "gudangs";
 
     protected $fillable = ['id_barang',  'jumlah_barang'];
+
+    public function barang()
+    {
+        return $this->hasOne('App\barang', 'id', 'id_barang');
+    }
 }
