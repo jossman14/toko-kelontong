@@ -18,8 +18,9 @@
         <thead>
           <tr>
             <th scope="col">No.</th>
-            <th scope="col">Id Barang</th>
-            <th scope="col">Jumlah Stok</th>
+            <th scope="col">Id pembeli</th>
+            <th scope="col">id penjualan</th>
+            <th scope="col">jumlah kurang</th>
             <th>Action</th>
 
           </tr>
@@ -29,8 +30,8 @@
             <tr>
                 <th scope="row">{{ $loop->iteration }}</th>
 
-                <td>{{$item->id_pembeli}}</td>
-                <td>{{$item->id_penjualan}}</td>
+                <td>{{$item->pembeli->nama}}</td>
+                <td>{{$item->penjualan->id_pembeli}}</td>
                 <td>{{$item->jumlah_kurang}}</td>
 
 
