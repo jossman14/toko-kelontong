@@ -64,10 +64,9 @@
                                                 <td class="button-style-three">
                                                     <div class="button-ap-list responsive-btn">
                                                         <div class="btn-group btn-custom-groups">
-
                                                             <button type="button" class="btn btn-primary">
                                                                 <a href="{{ route('supplier.edit', $item->id) }}"
-                                                                    role="button">Edit</a>
+                                                                    role="button"></a>
                                                                 <i class="fa fa-edit"></i>
                                                             </button>
 
@@ -81,7 +80,7 @@
                                                                         href="{{ route('supplier.edit', $item->id) }}"
                                                                         role="button"></a>
 
-                                                                    Delete
+                                                                    <i class="fa fa-trash"></i>
                                                                 </button>
                                                             </form>
 
