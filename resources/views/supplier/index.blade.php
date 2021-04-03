@@ -17,9 +17,7 @@
                                         <th scope="col">alamat</th>
                                         <th scope="col">no_hp</th>
                                         <th scope="col">catatan</th>
-
                                         <th>Action</th>
-
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -68,15 +66,13 @@
                     <div class="sparkline13-list shadow-reset">
                         <div class="sparkline13-hd">
                             <div class="main-sparkline13-hd">
-                                <h1>Data Supplier</h1>
+                                <h1>Projects <span class="table-project-n">Data</span> Table</h1>
                                 <div class="sparkline13-outline-icon">
                                     <span class="sparkline13-collapse-link"><i class="fa fa-chevron-up"></i></span>
                                     <span><i class="fa fa-wrench"></i></span>
                                     <span class="sparkline13-collapse-close"><i class="fa fa-times"></i></span>
                                 </div>
                             </div>
-                            <a class="btn btn-primary" href="{{ route('supplier.create') }}" role="button">Tambah
-                                Supplier</a>
                         </div>
                         <div class="sparkline13-graph">
                             <div class="datatable-dashv1-list custom-datatable-overright">
@@ -92,55 +88,23 @@
                                     data-key-events="true" data-show-toggle="true" data-resizable="true" data-cookie="true"
                                     data-cookie-id-table="saveId" data-show-export="true" data-click-to-select="true"
                                     data-toolbar="#toolbar">
-                                    @if (session('hasil'))
-                                        <div class="alert alert-warning alert-dismissible fade show" role="alert">
-                                            <strong>{{ session('hasil') }}</strong>
-                                            <button type="button" class="btn-close" data-bs-dismiss="alert"
-                                                aria-label="Close"></button>
-                                        </div>
-                                    @endif
                                     <thead>
                                         <tr>
                                             <th data-field="state" data-checkbox="true"></th>
-                                            <th data-field="id">No.</th>
-                                            <th data-field="name" data-editable="true">Nama Supplier</th>
-                                            <th data-field="email" data-editable="true">alamat</th>
-                                            <th data-field="phone" data-editable="true">no_hp</th>
-                                            <th data-field="company" data-editable="true">catatan</th>
+                                            <th data-field="id">ID</th>
+                                            <th data-field="name" data-editable="true">Project</th>
+                                            <th data-field="email" data-editable="true">Email</th>
+                                            <th data-field="phone" data-editable="true">Phone</th>
+                                            <th data-field="company" data-editable="true">Company</th>
+                                            <th data-field="complete">Completed</th>
+                                            <th data-field="task" data-editable="true">Task</th>
+                                            <th data-field="date" data-editable="true">Date</th>
+                                            <th data-field="price" data-editable="true">Price</th>
                                             <th data-field="action">Action</th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        @foreach ($data as $item)
-                                            <tr>
-                                                <th scope="row">{{ $loop->iteration }}</th>
-
-                                                <td>{{ $item->nama_supplier }}</td>
-                                                <td>{{ $item->alamat }}</td>
-                                                <td>{{ $item->no_hp }}</td>
-                                                <td>{{ $item->catatan }}</td>
-
-
-                                                <td>
-                                                    <a class="btn btn-outline-dark"
-                                                        href="{{ route('supplier.edit', $item->id) }}"
-                                                        role="button">Edit</a>
-
-
-                                                    <form action="{{ route('supplier.destroy', $item) }}" method="post"
-                                                        class="d-inline-block" style="margin: 0.4em 0;">
-                                                        @csrf
-                                                        @method("delete")
-                                                        <button type="submit" class="btn btn-bordered btn-danger "
-                                                            onclick="return confirm('apakah anda yakin menghapus barang {{ $item->nama_barang }}?');"><i
-                                                                class="fa fa-check mr-1"></i>Hapus</button>
-                                                    </form>
-                                                </td>
-
-                                            </tr>
-                                        @endforeach
                                         <tr>
-
                                             <td></td>
                                             <td>1</td>
                                             <td>Web Development</td>
