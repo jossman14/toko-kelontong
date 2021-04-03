@@ -73,8 +73,7 @@
                                                             </a>
                                                             <a href="{{ route('supplier.edit', $item->id) }}"
                                                                 role="button"><button type="button"
-                                                                    class="btn btn-primary"><i
-                                                                        class="fa fa-edit"></i></button></a>
+                                                                    class="btn btn-primary">Delete</button></a>
                                                             <form action="{{ route('supplier.destroy', $item) }}"
                                                                 method="post" class="d-inline-block"
                                                                 style="margin: 0.4em 0;">
@@ -83,7 +82,6 @@
                                                                 <button type="submit"
                                                                     class="btn btn-custon-rounded-three btn-danger"
                                                                     onclick="return confirm('apakah anda yakin menghapus barang {{ $item->nama_barang }}?');">
-                                                                    Delete
                                                                 </button>
                                                             </form>
 
