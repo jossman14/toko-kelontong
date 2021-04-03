@@ -39,18 +39,17 @@
                                 <table id="table" data-toggle="table" data-pagination="true" data-search="true"
                                     data-show-columns="true" data-show-pagination-switch="true" data-show-refresh="true"
                                     data-key-events="true" data-show-toggle="true" data-resizable="true" data-cookie="true"
-                                    data-cookie-id-table="saveId" data-show-export="true" data-click-to-select="true"
-                                    data-toolbar="#toolbar">
+                                    data-cookie-id-table="saveId" data-show-export="true" data-toolbar="#toolbar">
                                     <thead>
                                         <tr>
                                             <th data-field="state" data-checkbox="true"></th>
                                             <th data-field="id">No.</th>
-                                            <th data-field="company" data-editable="true">Nama Barang</th>
-                                            <th data-field="company" data-editable="true">Harga</th>
-                                            <th data-field="company" data-editable="true">Diskon</th>
-                                            <th data-field="company" data-editable="true">Jumlah Stok</th>
-                                            <th data-field="company" data-editable="true">Kadaluarsa</th>
-                                            <th data-field="company" data-editable="true">Supplier</th>
+                                            <th data-field="company">Nama Barang</th>
+                                            <th data-field="company">Harga</th>
+                                            <th data-field="company">Diskon</th>
+                                            <th data-field="company">Jumlah Stok</th>
+                                            <th data-field="company">Kadaluarsa</th>
+                                            <th data-field="company">Supplier</th>
                                             <th data-field="action">Action</th>
                                         </tr>
                                     </thead>
@@ -59,17 +58,13 @@
                                             <tr>
                                                 <td></td>
                                                 <td scope="row">{{ $loop->iteration }}</td>
-                                                <td></td>
-                                                <td></td>
-                                                <td></td>
-                                                <td></td>
-                                                <td></td>
-                                                {{-- <td>{{ $item->nama_barang }}</td>
+
+                                                <td>{{ $item->nama_barang }}</td>
                                                 <td>{{ $item->harga }}</td>
                                                 <td>{{ $item->diskon }}</td>
                                                 <td>{{ $item->jumlah_stok }}</td>
-                                                <td>{{ $item->kadaluarsa }}</td> --}}
-                                                <td>{{ $item->supplier->nama_supplier }}</td>
+                                                <td>{{ $item->kadaluarsa }}</td>
+                                                <td>{{ $item->id }}</td>
                                                 <td class="button-style-three">
                                                     <div class="button-ap-list responsive-btn">
                                                         <div class="btn-group btn-custom-groups">

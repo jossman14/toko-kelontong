@@ -44,10 +44,10 @@
                                         <tr>
                                             <th data-field="state" data-checkbox="true"></th>
                                             <th data-field="id">No.</th>
-                                            <th data-field="name" data-editable="true">Nama Supplier</th>
-                                            <th data-field="email" data-editable="true">alamat</th>
-                                            <th data-field="phone" data-editable="true">no_hp</th>
-                                            <th data-field="company" data-editable="true">catatan</th>
+                                            <th data-field="name">Nama Supplier</th>
+                                            <th data-field="email">alamat</th>
+                                            <th data-field="phone">no_hp</th>
+                                            <th data-field="company">catatan</th>
                                             <th data-field="action">Action</th>
                                         </tr>
                                     </thead>
