@@ -17,13 +17,14 @@
     <table class="table">
         <thead>
           <tr>
+
             <th scope="col">No.</th>
-            <th scope="col">Nama Barang</th>
-            <th scope="col">Harga</th>
-            <th scope="col">Diskon</th>
-            <th scope="col">Jumlah Stok</th>
-            <th scope="col">Kadaluarsa</th>
-            <th scope="col">Supplier</th>
+            <th scope="col">id_pembeli</th>
+            <th scope="col">id_barang</th>
+            <th scope="col">jumlah_barang</th>
+            <th scope="col">jumlah_harga</th>
+            <th scope="col">lunas</th>
+            <th scope="col">id_penjualan</th>
             <th scope="col">Edit</th>
 
           </tr>
@@ -33,12 +34,12 @@
             <tr>
                 <th scope="row">{{ $loop->iteration }}</th>
 
-                <td>{{$item->nama_barang}}</td>
-                <td>{{$item->harga}}</td>
-                <td>{{$item->diskon}}</td>
-                <td>{{$item->jumlah_stok}}</td>
-                <td>{{$item->kadaluarsa}}</td>
-                <td>{{$item->id_supplier}}</td>
+                <td>{{$item->id_pembeli}}</td>
+                <td>{{$item->id_barang}}</td>
+                <td>{{$item->jumlah_barang}}</td>
+                <td>{{$item->jumlah_harga}}</td>
+                <td>{{$item->lunas}}</td>
+                <td>{{$item->id_penjualan}}</td>
                 <td>
     <a class="btn btn-outline-dark" href="{{route("detail-penjualan.edit", $item->id)}}" role="button">Edit</a>
 
@@ -48,7 +49,7 @@
                                         @csrf
                                         @method("delete")
                                         <button type="submit" class="btn btn-bordered btn-danger "
-                                            onclick="return confirm('apakah anda yakin menghapus barang {{ $item->nama_barang }}?');"><i
+                                            onclick="return confirm('apakah anda yakin menghapus barang {{ $item->id_pembeli }}?');"><i
                                                 class="fa fa-check mr-1"></i>Hapus</button>
                                     </form>
                   </td>
