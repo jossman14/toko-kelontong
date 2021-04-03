@@ -59,12 +59,17 @@
                                             <tr>
                                                 <td></td>
                                                 <td scope="row">{{ $loop->iteration }}</td>
-                                                <td>{{ $item->nama_barang }}</td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                {{-- <td>{{ $item->nama_barang }}</td>
                                                 <td>{{ $item->harga }}</td>
                                                 <td>{{ $item->diskon }}</td>
                                                 <td>{{ $item->jumlah_stok }}</td>
-                                                <td>{{ $item->kadaluarsa }}</td>
-                                                <td>{{ $item->id_supplier }}</td>
+                                                <td>{{ $item->kadaluarsa }}</td> --}}
+                                                <td>{{ $item->supplier->nama_supplier }}</td>
                                                 <td class="button-style-three">
                                                     <div class="button-ap-list responsive-btn">
                                                         <div class="btn-group btn-custom-groups">
