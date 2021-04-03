@@ -25,6 +25,7 @@ use App\Http\Controllers\SupplierController;
 // Route::get('/tambah-barang', [BarangController::class, 'create'])->name('tambah-barang');
 // Route::post('/simpan-barang', [BarangController::class, 'store'])->name('simpan-barang');
 
+Route::resource('/', 'UserController');
 Route::resource('/barang', 'BarangController');
 Route::resource('/detail-penjualan', 'DetailPenjualanController');
 Route::resource('/gudang', 'GudangController');
@@ -33,7 +34,5 @@ Route::resource('/pembeli', 'PembeliController');
 Route::resource('/penjualan', 'PenjualanController');
 Route::resource('/piutang', 'PiutangController');
 Route::resource('/supplier', 'SupplierController');
-Route::get('/', 'BarangController@index')->name('barang');
 
-Route::get('/user', 'UserController@home')->name('home');
 Route::get('/user/penjualan', 'UserController@transaksi')->name('penjualan');

@@ -10,7 +10,7 @@
         <div class="left-custom-menu-adp-wrap">
             <ul class="nav navbar-nav left-sidebar-menu-pro">
                 <li class="nav-item">
-                    <a href="{{ route('home') }}" role="button" aria-expanded="false"
+                    <a href="{{ route('index') }}" role="button" aria-expanded="false"
                         class="nav-link dropdown-toggle">
                         <i class="fa big-icon fa-home"></i>
                         <span class="mini-dn">Home</span>
@@ -27,9 +27,9 @@
                     </a>
                     <div role="menu" class="dropdown-menu left-menu-dropdown animated flipInX">
                         <a href="" class="dropdown-item">User</a>
-                        <a href="{{ route('barang') }}" class="dropdown-item">Barang</a>
+                        <a href="{{ route('barang.index') }}" class="dropdown-item">Barang</a>
                         <a href="" class="dropdown-item">Pembeli</a>
-                        <a href="supplier.show" class="dropdown-item">Supplier</a>
+                        <a href="{{ route('supplier.index') }}" class="dropdown-item">Supplier</a>
                     </div>
                 </li>
                 <li class="nav-item">
