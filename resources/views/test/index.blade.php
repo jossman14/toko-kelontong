@@ -1,6 +1,6 @@
 @extends('user.template')
 @section('JudulHalaman', 'Toko Mas Woko')
-@section('breadcome', 'Data Supplier')
+@section('breadcome', 'Data Barang')
 
 @section('content')
     <div class="data-table-area mg-b-15">
@@ -17,10 +17,10 @@
                                 </div>
                             @endif
                             <div class="main-sparkline13-hd">
-                                <h1>Data Supplier</h1>
+                                <h1>Data Barang</h1>
                                 <hr>
                                 <a class="btn btn-primary" href="{{ route('barang.create') }}" role="button">
-                                    Tambah Supplier
+                                    Tambah Barang
                                 </a>
                                 <div class="sparkline13-outline-icon">
                                     <span class="sparkline13-collapse-link"><i class="fa fa-chevron-up"></i></span>
@@ -44,7 +44,7 @@
                                         <tr>
                                             <th data-field="state" data-checkbox="true"></th>
                                             <th data-field="id">No.</th>
-                                            <th data-field="name">Nama Supplier</th>
+                                            <th data-field="name">Nama Barang</th>
                                             <th data-field="harga">Harga</th>
                                             <th data-field="diskon">Diskon</th>
                                             <th data-field="stok">Jumlah Stok</th>
@@ -73,14 +73,14 @@
                                                                 <i class="fa fa-edit"></i>
                                                             </button>
 
-                                                            <form action="{{ route('supplier.destroy', $item) }}"
+                                                            <form action="{{ route('barang.destroy', $item) }}"
                                                                 method="post" class="d-inline-block"
                                                                 style="margin: 0.4em 0;">
                                                                 @csrf
                                                                 @method("delete")
                                                                 <button type="submit" class="btn btn-primary"
                                                                     onclick="return confirm('apakah anda yakin menghapus barang {{ $item->nama_barang }}?');"><a
-                                                                        href="{{ route('supplier.edit', $item->id) }}"
+                                                                        href="{{ route('barang.edit', $item->id) }}"
                                                                         role="button"></a>
                                                                     <i class="fa fa-trash"></i>
                                                                 </button>
