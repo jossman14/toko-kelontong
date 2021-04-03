@@ -14,6 +14,14 @@ class detail_penjualan extends Model
 
     public function pembeli()
     {
-        return $this->hasOne('App\supplier', 'id', 'id_supplier');
+        return $this->hasOne('App\pembeli', 'id', 'id_pembeli');
+    }
+    public function barang()
+    {
+        return $this->hasOne('App\barang', 'id', 'id_barang');
+    }
+    public function penjualan()
+    {
+        return $this->hasOne('App\barang', 'id', 'id_penjualan');
     }
 }
