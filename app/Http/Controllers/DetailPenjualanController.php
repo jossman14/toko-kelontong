@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\detail_penjualan;
+use App\pembeli;
+use App\barang;
+use App\penjualan;
 use Illuminate\Http\Request;
 
 class DetailPenjualanController extends Controller
@@ -21,7 +24,7 @@ class DetailPenjualanController extends Controller
     {
         $data = detail_penjualan::with("barang", "penjualan", "pembeli")->get();
 
-        // dd($data->all());    
+        // dd($data->all());
 
         return view('detail-penjualan.index', compact('data'));
     }
@@ -34,6 +37,9 @@ class DetailPenjualanController extends Controller
     public function create()
     {
         //mengarah ke halaman tambah detail_penjualan
+        $pembeli = pembeli::all();
+        $barang = barang::all();
+        $penjualan = penjualan::all();
         return view('detail-penjualan.create');
     }
 
