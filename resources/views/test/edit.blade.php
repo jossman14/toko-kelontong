@@ -1,5 +1,4 @@
-@extends('test.layout-test')
-
+@extends('test.layout')
 
 @section('JudulHalaman', "Halaman Tambah Barang")
 

@@ -27,7 +27,6 @@
 </head>
 
 <body>
-
     @yield('IsiHalaman')
 
     <!-- Optional JavaScript; choose one of the two! -->

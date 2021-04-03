@@ -1,5 +1,4 @@
-@extends('test.layout-test')
-
+@extends('test.layout')
 
 @section('JudulHalaman', "Halaman Awal")
 
@@ -13,7 +12,7 @@
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
       </div>
 @endif
-    <a class="btn btn-primary" href="{{route("gudang.create")}}" role="button">Tambah Barang</a>
+    <a class="btn btn-primary" href="{{route("barang.create")}}" role="button">Tambah Barang</a>
     <table class="table">
         <thead>
           <tr>
@@ -33,17 +32,17 @@
             <tr>
                 <th scope="row">{{ $loop->iteration }}</th>
 
-                <td>{{$item->id_pembeli}}</td>
-                <td>{{$item->id_barang}}</td>
-                <td>{{$item->jumlah_barang}}</td>
-                <td>{{$item->jumlah_harga}}</td>
-                <td>{{$item->lunas}}</td>
-                <td>{{$item->id_penjualan}}</td>
+                <td>{{$item->nama_barang}}</td>
+                <td>{{$item->harga}}</td>
+                <td>{{$item->diskon}}</td>
+                <td>{{$item->jumlah_stok}}</td>
+                <td>{{$item->kadaluarsa}}</td>
+                <td>{{$item->id_supplier}}</td>
                 <td>
-    <a class="btn btn-outline-dark" href="{{route("gudang.edit", $item->id)}}" role="button">Edit</a>
+    <a class="btn btn-outline-dark" href="{{route("barang.edit", $item->id)}}" role="button">Edit</a>
 
 
-    <form action="{{ route("gudang.destroy", $item ) }}" method="post"
+    <form action="{{ route("barang.destroy", $item ) }}" method="post"
                                         class="d-inline-block" style="margin: 0.4em 0;">
                                         @csrf
                                         @method("delete")

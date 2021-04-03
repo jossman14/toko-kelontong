@@ -1,9 +1,8 @@
-@extends('test.layout-test')
+@extends('test.layout')
 
 @section('JudulHalaman', "Halaman Awal")
 
 @section('IsiHalaman')
-
 <div class="container">
     <h1>Halaman index</h1>
     @if (session('hasil'))
