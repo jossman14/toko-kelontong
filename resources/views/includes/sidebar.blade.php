@@ -28,7 +28,7 @@
                     <div role="menu" class="dropdown-menu left-menu-dropdown animated flipInX">
                         <a href="" class="dropdown-item">User</a>
                         <a href="{{ route('barang.index') }}" class="dropdown-item">Barang</a>
-                        <a href="" class="dropdown-item">Pembeli</a>
+                        <a href="{{ route('pembeli.index') }} " class="dropdown-item">Pembeli</a>
                         <a href="{{ route('supplier.index') }}" class="dropdown-item">Supplier</a>
                     </div>
                 </li>
