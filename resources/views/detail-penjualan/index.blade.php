@@ -34,12 +34,12 @@
             <tr>
                 <th scope="row">{{ $loop->iteration }}</th>
 
-                <td>{{$item->id_pembeli}}</td>
-                <td>{{$item->id_barang}}</td>
+                <td>{{$item->pembeli->nama}}</td>
+                <td>{{$item->barang->nama_barang}}</td>
                 <td>{{$item->jumlah_barang}}</td>
                 <td>{{$item->jumlah_harga}}</td>
                 <td>{{$item->lunas}}</td>
-                <td>{{$item->id_penjualan}}</td>
+                <td>{{$item->penjualan->id}}</td>
                 <td>
     <a class="btn btn-outline-dark" href="{{route("detail-penjualan.edit", $item->id)}}" role="button">Edit</a>
 
