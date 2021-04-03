@@ -45,11 +45,11 @@
                                             <th data-field="state" data-checkbox="true"></th>
                                             <th data-field="id">No.</th>
                                             <th data-field="name">Nama Supplier</th>
-                                            <th data-field="company">Harga</th>
-                                            <th data-field="company">Diskon</th>
-                                            <th data-field="company">Jumlah Stok</th>
-                                            <th data-field="company">Kadaluarsa</th>
-                                            <th data-field="company">Supplier</th>
+                                            <th data-field="harga">Harga</th>
+                                            <th data-field="diskon">Diskon</th>
+                                            <th data-field="stok">Jumlah Stok</th>
+                                            <th data-field="kadaluarsa">Kadaluarsa</th>
+                                            <th data-field="supplier">Supplier</th>
                                             <th data-field="action">Action</th>
                                         </tr>
                                     </thead>
@@ -60,14 +60,15 @@
                                                 <td scope="row">{{ $loop->iteration }}</td>
                                                 <td>{{ $item->nama_barang }}</td>
                                                 <td>{{ $item->harga }}</td>
-                                                <td>{{ $item->alamat }}</td>
-                                                <td>{{ $item->no_hp }}</td>
-                                                <td>{{ $item->catatan }}</td>
+                                                <td>{{ $item->diskon }}</td>
+                                                <td>{{ $item->jumlah_stok }}</td>
+                                                <td>{{ $item->kadaluarsa }}</td>
+                                                <td>{{ $item->id_supplier }}</td>
                                                 <td class="button-style-three">
                                                     <div class="button-ap-list responsive-btn">
                                                         <div class="btn-group btn-custom-groups">
                                                             <button type="button" class="btn btn-primary">
-                                                                <a href="{{ route('supplier.edit', $item->id) }}"
+                                                                <a href="{{ route('barang.edit', $item->id) }}"
                                                                     role="button"></a>
                                                                 <i class="fa fa-edit"></i>
                                                             </button>
