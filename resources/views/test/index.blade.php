@@ -81,7 +81,7 @@
                                                                 @method("delete")
                                                                 <button type="submit" class="btn btn-primary"
                                                                     onclick="return confirm('apakah anda yakin menghapus barang {{ $item->nama_barang }}?');"><a
-                                                                        href="{{ route('Barang.edit', $item->id) }}"
+                                                                        href="{{ route('barang.edit', $item->id) }}"
                                                                         role="button"></a>
                                                                     <i class="fa fa-trash"></i>
                                                                 </button>
