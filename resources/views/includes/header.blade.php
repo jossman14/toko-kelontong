@@ -41,6 +41,9 @@
     <!-- charts CSS
   ============================================ -->
     <link rel="stylesheet" href="{{ asset('template/css/c3.min.css') }}">
+    <!-- buttons CSS
+  ============================================ -->
+    <link rel="stylesheet" href="{{ asset('template/css/buttons.css') }}">
     <!-- style CSS
   ============================================ -->
     <link rel="stylesheet" href="{{ asset('template/style.css') }}">
