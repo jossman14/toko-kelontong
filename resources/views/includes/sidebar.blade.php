@@ -1,7 +1,7 @@
 <div class="left-sidebar-pro">
     <nav id="sidebar">
         <div class="sidebar-header">
-            <a href="#"><img src="{{ asset('images/ico.png') }}" alt="" style="height: 100px; width: 100px" />
+            <a href="#"><img src="{{ asset('images/logo.png') }}" alt="" style="height: 100px; width: 100px" />
             </a>
             <h3><b>Toko Mas Woko</b></h3>
             <p><u>Belanja Puas Harga Pas</u></p>
