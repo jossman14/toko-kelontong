@@ -62,14 +62,15 @@
                                                 <td>{{ $item->no_hp }}</td>
                                                 <td>{{ $item->catatan }}</td>
                                                 <td class="button-style-three">
-                                                    <a class="btn fas fa-edit btn-success"
+                                                    <a class="btn btn-custon-rounded-three btn-success"
                                                         href="{{ route('supplier.edit', $item->id) }}"
                                                         role="button">Edit</a>
                                                     <form action="{{ route('supplier.destroy', $item) }}" method="post"
                                                         class="d-inline-block" style="margin: 0.4em 0;">
                                                         @csrf
                                                         @method("delete")
-                                                        <button type="submit" class="btn fas fa-trash-alt btn-danger"
+                                                        <button type="submit"
+                                                            class="btn btn-custon-rounded-three btn-danger"
                                                             onclick="return confirm('apakah anda yakin menghapus barang {{ $item->nama_barang }}?');"><i
                                                                 class="fa fa-check mr-1"></i>Hapus
                                                         </button>
