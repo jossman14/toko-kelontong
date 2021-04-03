@@ -20,8 +20,7 @@ class GudangController extends Controller
      */
     public function index()
     {
-        $data = gudang::all();
-
+        $data = gudang::with("barang")->get();
 
         return view('gudang.index', compact('data'));
     }
