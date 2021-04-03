@@ -62,6 +62,8 @@
                                                 <td>{{ $item->no_hp }}</td>
                                                 <td>{{ $item->catatan }}</td>
                                                 <td class="button-style-three">
+                                                    <a href=""><i class="fas fa-trash"></i></a>
+                                                    <a href=""><i class="fas fa-trash"></i></a>
                                                     <a class="btn btn-custon-rounded-three btn-success"
                                                         href="{{ route('supplier.edit', $item->id) }}" role="button"><i
                                                             class="fa fa-edit"></i></a>
@@ -72,7 +74,7 @@
                                                         <button type="submit"
                                                             class="btn btn-custon-rounded-three btn-danger"
                                                             onclick="return confirm('apakah anda yakin menghapus barang {{ $item->nama_barang }}?');"><i
-                                                                class="fas fa-trash-alt"></i><i class="fa fa-edit"></i>
+                                                                class="far fa-trash-alt"></i><i class="fa fa-edit"></i>
                                                         </button>
                                                     </form>
                                                 </td>
