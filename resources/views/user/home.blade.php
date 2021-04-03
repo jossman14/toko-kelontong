@@ -80,7 +80,7 @@
                                 </div>
                             </div>
                             <div class="income-range visitor-cl">
-                                <p>New Visitor</p>
+                                <p>Barang Baru</p>
                                 <span class="income-percentange">55% <i class="fa fa-level-up"></i></span>
                             </div>
                             <div class="clear"></div>
@@ -91,23 +91,23 @@
                     <div class="income-dashone-total user-monthly shadow-reset nt-mg-b-30">
                         <div class="income-title">
                             <div class="main-income-head">
-                                <h2>User activity</h2>
+                                <h2>Pelanggan</h2>
                                 <div class="main-income-phara low-value-cl">
-                                    <p>Low Value</p>
+                                    <p>Bulan Ini</p>
                                 </div>
                             </div>
                         </div>
                         <div class="income-dashone-pro">
                             <div class="income-rate-total">
                                 <div class="price-adminpro-rate">
-                                    <h3><span class="counter">88200</span></h3>
+                                    <h3><span class="counter">3554</span>Orang</h3>
                                 </div>
                                 <div class="price-graph">
                                     <span id="sparkline5"></span>
                                 </div>
                             </div>
                             <div class="income-range low-value-cl">
-                                <p>In first month</p>
+                                <p>Pelanggan Baru</p>
                                 <span class="income-percentange">33% <i class="fa fa-level-down"></i></span>
                             </div>
                             <div class="clear"></div>
