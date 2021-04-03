@@ -61,7 +61,7 @@
                                                 <td>{{ $item->alamat }}</td>
                                                 <td>{{ $item->no_hp }}</td>
                                                 <td>{{ $item->catatan }}</td>
-                                                <td>
+                                                <td class="button-style-three">
                                                     <a class="btn btn-custon-rounded-three btn-success"
                                                         href="{{ route('supplier.edit', $item->id) }}"
                                                         role="button">Edit</a>
