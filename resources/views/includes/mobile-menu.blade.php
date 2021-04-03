@@ -26,7 +26,7 @@
                                         <a href="{{ route('pembeli.index') }}">Pembeli</a>
                                     </li>
                                     <li>
-                                        <a href="{{ route('supplier.index') }}">Supplier</a>
+                                        <a href="{{ route('supplier.indexPwidge') }}">Supplier</a>
                                     </li>
                                 </ul>
                             </li>
