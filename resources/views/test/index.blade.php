@@ -20,7 +20,7 @@
                                 <h1>Data Supplier</h1>
                                 <hr>
                                 <a class="btn btn-primary" href="{{ route('barang.create') }}" role="button">
-                                    Tambah Barang
+                                    Tambah Supplier
                                 </a>
                                 <div class="sparkline13-outline-icon">
                                     <span class="sparkline13-collapse-link"><i class="fa fa-chevron-up"></i></span>
@@ -44,7 +44,7 @@
                                         <tr>
                                             <th data-field="state" data-checkbox="true"></th>
                                             <th data-field="id">No.</th>
-                                            <th data-field="company">Nama Barang</th>
+                                            <th data-field="name">Nama Supplier</th>
                                             <th data-field="company">Harga</th>
                                             <th data-field="company">Diskon</th>
                                             <th data-field="company">Jumlah Stok</th>
@@ -58,29 +58,29 @@
                                             <tr>
                                                 <td></td>
                                                 <td scope="row">{{ $loop->iteration }}</td>
-
                                                 <td>{{ $item->nama_barang }}</td>
                                                 <td>{{ $item->harga }}</td>
-                                                <td>{{ $item->diskon }}</td>
-                                                <td>{{ $item->jumlah_stok }}</td>
-                                                <td>{{ $item->kadaluarsa }}</td>
-                                                <td>{{ $item->suppler }}</td>
+                                                <td>{{ $item->alamat }}</td>
+                                                <td>{{ $item->no_hp }}</td>
+                                                <td>{{ $item->catatan }}</td>
                                                 <td class="button-style-three">
                                                     <div class="button-ap-list responsive-btn">
                                                         <div class="btn-group btn-custom-groups">
                                                             <button type="button" class="btn btn-primary">
-                                                                <a href="{{ route('barang.edit', $item->id) }}"
+                                                                <a href="{{ route('supplier.edit', $item->id) }}"
                                                                     role="button"></a>
                                                                 <i class="fa fa-edit"></i>
                                                             </button>
 
-                                                            <form action="{{ route('barang.destroy', $item) }}"
+                                                            <form action="{{ route('supplier.destroy', $item) }}"
                                                                 method="post" class="d-inline-block"
                                                                 style="margin: 0.4em 0;">
                                                                 @csrf
                                                                 @method("delete")
                                                                 <button type="submit" class="btn btn-primary"
-                                                                    onclick="return confirm('apakah anda yakin menghapus barang {{ $item->nama_barang }}?');">
+                                                                    onclick="return confirm('apakah anda yakin menghapus barang {{ $item->nama_barang }}?');"><a
+                                                                        href="{{ route('supplier.edit', $item->id) }}"
+                                                                        role="button"></a>
                                                                     <i class="fa fa-trash"></i>
                                                                 </button>
                                                             </form>
@@ -91,7 +91,6 @@
                                         @endforeach
                                     </tbody>
                                 </table>
-
                             </div>
                         </div>
                     </div>
