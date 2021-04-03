@@ -29,7 +29,7 @@
                         <a href="" class="dropdown-item">User</a>
                         <a href="{{ route('barang') }}" class="dropdown-item">Barang</a>
                         <a href="" class="dropdown-item">Pembeli</a>
-                        <a href="" class="dropdown-item">Supplier</a>
+                        <a href="{{ route('supplier') }}" class="dropdown-item">Supplier</a>
                     </div>
                 </li>
                 <li class="nav-item">
