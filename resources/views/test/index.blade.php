@@ -80,9 +80,7 @@
                                                                 @csrf
                                                                 @method("delete")
                                                                 <button type="submit" class="btn btn-primary"
-                                                                    onclick="return confirm('apakah anda yakin menghapus barang {{ $item->nama_barang }}?');"><a
-                                                                        href="{{ route('barang.edit', $item->id) }}"
-                                                                        role="button"></a>
+                                                                    onclick="return confirm('apakah anda yakin menghapus barang {{ $item->nama_barang }}?');">
                                                                     <i class="fa fa-trash"></i>
                                                                 </button>
                                                             </form>
