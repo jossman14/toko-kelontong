@@ -26,21 +26,21 @@
                         </span>
                     </a>
                     <div role="menu" class="dropdown-menu left-menu-dropdown animated flipInX">
-                        <a href="inbox.html" class="dropdown-item">User</a>
-                        <a href="view-mail.html" class="dropdown-item">Barang</a>
-                        <a href="compose-mail.html" class="dropdown-item">Pembeli</a>
-                        <a href="compose-mail.html" class="dropdown-item">Supplier</a>
+                        <a href="" class="dropdown-item">User</a>
+                        <a href="{{ route('barang') }}" class="dropdown-item">Barang</a>
+                        <a href="" class="dropdown-item">Pembeli</a>
+                        <a href="" class="dropdown-item">Supplier</a>
                     </div>
                 </li>
                 <li class="nav-item">
-                    <a href="{{ route('transaksi') }}" role="button" aria-expanded="false"
+                    <a href="{{ route('penjualan') }}" role="button" aria-expanded="false"
                         class="nav-link dropdown-toggle">
                         <i class="fa big-icon fa-cart-plus"></i>
                         <span class="mini-dn">Transaksi Penjualan</span>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="#" role="button" aria-expanded="false" class="nav-link dropdown-toggle">
+                    <a href="" role="button" aria-expanded="false" class="nav-link dropdown-toggle">
                         <i class="fa big-icon fa-shopping-basket"></i>
                         <span class="mini-dn">Transaksi Pembelian</span>
                     </a>
@@ -55,8 +55,8 @@
                         </span>
                     </a>
                     <div role="menu" class="dropdown-menu left-menu-dropdown animated flipInX">
-                        <a href="compose-mail.html" class="dropdown-item">Lap. Penjualan</a>
-                        <a href="compose-mail.html" class="dropdown-item">Lap. Pembelian</a>
+                        <a href="" class="dropdown-item">Lap. Penjualan</a>
+                        <a href="" class="dropdown-item">Lap. Pembelian</a>
                     </div>
                 </li>
             </ul>

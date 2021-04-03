@@ -33,7 +33,7 @@ Route::resource('/pembeli', 'PembeliController');
 Route::resource('/penjualan', 'PenjualanController');
 Route::resource('/piutang', 'PiutangController');
 Route::resource('/supplier', 'SupplierController');
-Route::get('/', 'BarangController@index');
+Route::get('/', 'BarangController@index')->name('barang');
 
 Route::get('/user', 'UserController@home')->name('home');
-Route::get('/user/transaksi', 'UserController@transaksi')->name('transaksi');
+Route::get('/user/penjualan', 'UserController@transaksi')->name('penjualan');

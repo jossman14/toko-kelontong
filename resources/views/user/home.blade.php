@@ -3,7 +3,6 @@
 @section('breadcome', 'Dashboard')
 
 @section('content')
-    <h1>Ini halaman home</h1>
     <div class="income-order-visit-user-area">
         <div class="container-fluid">
             <div class="row">
