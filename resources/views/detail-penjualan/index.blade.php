@@ -1,4 +1,5 @@
-@extends('test.layout')
+@extends('test.layout-test')
+
 
 @section('JudulHalaman', "Halaman Awal")
 
