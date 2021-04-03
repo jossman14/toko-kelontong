@@ -16,8 +16,9 @@
                                         aria-label="Close"></button>
                                 </div>
                             @endif
-                            <div class="main-sparkline13-hd">
+                            <div class="main-sparkline13-hd d-flex justify-content-end">
                                 <h1>Data Supplier</h1>
+                                <hr>
                                 <a class="btn btn-primary" href="{{ route('barang.create') }}" role="button">
                                     Tambah Barang
                                 </a>
