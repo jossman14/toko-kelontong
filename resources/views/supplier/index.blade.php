@@ -71,23 +71,25 @@
                                                                     <i class="fa fa-edit"></i>
                                                                 </button>
                                                             </a>
+                                                            <a href="{{ route('supplier.edit', $item->id) }}"
+                                                                role="button"><button type="button"
+                                                                    class="btn btn-primary"><i
+                                                                        class="fa fa-edit"></i></button></a>
+                                                            <form action="{{ route('supplier.destroy', $item) }}"
+                                                                method="post" class="d-inline-block"
+                                                                style="margin: 0.4em 0;">
+                                                                @csrf
+                                                                @method("delete")
+                                                                <button type="submit"
+                                                                    class="btn btn-custon-rounded-three btn-danger"
+                                                                    onclick="return confirm('apakah anda yakin menghapus barang {{ $item->nama_barang }}?');">
+                                                                    Delete
+                                                                </button>
+                                                            </form>
 
-                                                            <button type="button" class="btn btn-primary">Delete</button>
                                                         </div>
                                                     </div>
-                                                    <a class="btn btn-custon-rounded-three btn-success"
-                                                        href="{{ route('supplier.edit', $item->id) }}" role="button"><i
-                                                            class="fa fa-edit"></i></a>
-                                                    <form action="{{ route('supplier.destroy', $item) }}" method="post"
-                                                        class="d-inline-block" style="margin: 0.4em 0;">
-                                                        @csrf
-                                                        @method("delete")
-                                                        <button type="submit"
-                                                            class="btn btn-custon-rounded-three btn-danger"
-                                                            onclick="return confirm('apakah anda yakin menghapus barang {{ $item->nama_barang }}?');"><i
-                                                                class="far fa-trash-alt"></i><i class="fa fa-edit"></i>
-                                                        </button>
-                                                    </form>
+
                                                 </td>
                                             </tr>
                                         @endforeach
