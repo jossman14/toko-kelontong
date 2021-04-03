@@ -11,4 +11,9 @@ class detail_penjualan extends Model
     protected $table = "detail_penjualans";
 
     protected $fillable = ['id_pembeli',  'id_barang',  'jumlah_barang', 'jumlah_harga', 'lunas','id_penjualan'];
+
+    public function pembeli()
+    {
+        return $this->hasOne('App\supplier', 'id', 'id_supplier');
+    }
 }
