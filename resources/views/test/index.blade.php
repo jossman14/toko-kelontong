@@ -67,12 +67,11 @@
                                                 <td class="button-style-three">
                                                     <div class="button-ap-list responsive-btn">
                                                         <div class="btn-group btn-custom-groups">
-                                                            <button type="button" class="btn btn-primary">
 
-                                                                <i class="fa fa-edit"> <a
-                                                                        href="{{ route('barang.edit', $item->id) }}"
-                                                                        role="button"></a></i>
-                                                            </button>
+
+                                                            <a href="{{ route('barang.edit', $item->id) }}"
+                                                                class="btn btn-primary" role="button"><i
+                                                                    class="fa fa-edit "></i></a>
 
                                                             <form action="{{ route('barang.destroy', $item) }}"
                                                                 method="post" class="d-inline-block"
