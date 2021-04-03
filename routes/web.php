@@ -35,3 +35,6 @@ Route::resource('/piutang', 'PiutangController');
 Route::resource('/supplier', 'SupplierController');
 Route::get('/user', 'UserController@home');
 Route::get('/', 'BarangController@index');
+
+Route::get('/user', 'UserController@home')->name('home');
+Route::get('/user/transaksi', 'UserController@transaksi')->name('transaksi');
