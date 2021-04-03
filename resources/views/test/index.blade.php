@@ -91,58 +91,7 @@
                                         @endforeach
                                     </tbody>
                                 </table>
-                                <table>
-                                    <thead>
-                                        <tr>
-                                            <th data-field="state" data-checkbox="true"></th>
-                                            <th data-field="id">No.</th>
-                                            <th data-field="company">Nama Barang</th>
-                                            <th data-field="company">Harga</th>
-                                            <th data-field="company">Diskon</th>
-                                            <th data-field="company">Jumlah Stok</th>
-                                            <th data-field="company">Kadaluarsa</th>
-                                            <th data-field="company">Supplier</th>
-                                            <th data-field="action">Action</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        @foreach ($data as $item)
-                                            <tr>
-                                                <td></td>
-                                                <td scope="row">{{ $loop->iteration }}</td>
 
-                                                <td>{{ $item->nama_barang }}</td>
-                                                <td>{{ $item->harga }}</td>
-                                                <td>{{ $item->diskon }}</td>
-                                                <td>{{ $item->jumlah_stok }}</td>
-                                                <td>{{ $item->kadaluarsa }}</td>
-                                                <td>{{ $item->suppler }}</td>
-                                                <td class="button-style-three">
-                                                    <div class="button-ap-list responsive-btn">
-                                                        <div class="btn-group btn-custom-groups">
-                                                            <button type="button" class="btn btn-primary">
-                                                                <a href="{{ route('barang.edit', $item->id) }}"
-                                                                    role="button"></a>
-                                                                <i class="fa fa-edit"></i>
-                                                            </button>
-
-                                                            <form action="{{ route('barang.destroy', $item) }}"
-                                                                method="post" class="d-inline-block"
-                                                                style="margin: 0.4em 0;">
-                                                                @csrf
-                                                                @method("delete")
-                                                                <button type="submit" class="btn btn-primary"
-                                                                    onclick="return confirm('apakah anda yakin menghapus barang {{ $item->nama_barang }}?');">
-                                                                    <i class="fa fa-trash"></i>
-                                                                </button>
-                                                            </form>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                        @endforeach
-                                    </tbody>
-                                </table>
                             </div>
                         </div>
                     </div>
