@@ -1,7 +1,6 @@
 @extends('user.template')
 @section('JudulHalaman', 'Toko Mas Woko')
 @section('breadcome', 'Data Barang')
-@section('title', 'Data Barang')
 
 @section('content')
     <div class="container-fluid">
@@ -10,7 +9,7 @@
                 <div class="dashtwo-order-list shadow-reset">
                     <div class="row">
                         <div class="container">
-                            <h1>@yield('title')</h1>
+                            <h1>Data Barang</h1>
                             @if (session('hasil'))
 
                                 <div class="alert alert-warning alert-dismissible fade show" role="alert">

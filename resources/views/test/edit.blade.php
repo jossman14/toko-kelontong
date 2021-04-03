@@ -1,6 +1,6 @@
 @extends('user.template')
 @section('JudulHalaman', 'Toko Mas Woko')
-@section('breadcome', 'Data Barang')
+@section('breadcome', 'Edit Data Barang')
 
 @section('content')
     <div class="container-fluid">
@@ -9,7 +9,7 @@
                 <div class="dashtwo-order-list shadow-reset">
                     <div class="row">
                         <div class="container">
-                            <h1>Edit Barang</h1>
+                            <h1>Edit Data Barang</h1>
                             <form method="POST" action="{{ route('barang.update', $barang) }}">
                                 @csrf
                                 @method("patch")
