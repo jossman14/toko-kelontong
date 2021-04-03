@@ -9,31 +9,31 @@
     <form method="POST" action="{{route('detail-penjualan.update', $detail_penjualan)}}">
         @csrf
         @method("patch")
-        protected $fillable = ['id_pembeli',  'id_barang',  'jumlah_barang', 'jumlah_harga', 'lunas','id_penjualan'];
+
 
         <div class="mb-3">
           <label for="id_pembeli" class="form-label">id_pembeli</label>
           <input value="{{$detail_penjualan->id_pembeli}}" type="text" class="form-control" id="id_pembeli" aria-describedby="id_pembeli" name="id_pembeli">
         </div>
         <div class="mb-3">
-          <label for="harga" class="form-label">Harga</label>
-          <input value="{{$detail_penjualan->harga}}" type="text" class="form-control" id="harga" aria-describedby="harga" name="harga">
+          <label for="id_barang" class="form-label">id_barang</label>
+          <input value="{{$detail_penjualan->id_barang}}" type="text" class="form-control" id="id_barang" aria-describedby="id_barang" name="id_barang">
         </div>
         <div class="mb-3">
-          <label for="diskon" class="form-label">Diskon</label>
-          <input value="{{$detail_penjualan->diskon}}" type="text" class="form-control" id="diskon" aria-describedby="diskon" name="diskon">
+          <label for="jumlah_barang" class="form-label">jumlah_barang</label>
+          <input value="{{$detail_penjualan->jumlah_barang}}" type="text" class="form-control" id="jumlah_barang" aria-describedby="jumlah_barang" name="jumlah_barang">
         </div>
         <div class="mb-3">
-          <label for="jumlah_stok" class="form-label">Jumlah Stok</label>
-          <input value="{{$detail_penjualan->jumlah_stok}}" type="text" class="form-control" id="jumlah_stok" aria-describedby="jumlah_stok" name="jumlah_stok">
+          <label for="jumlah_harga" class="form-label">jumlah_harga</label>
+          <input value="{{$detail_penjualan->jumlah_harga}}" type="text" class="form-control" id="jumlah_harga" aria-describedby="jumlah_harga" name="jumlah_harga">
         </div>
         <div class="mb-3">
-          <label for="kadaluarsa" class="form-label">Kadaluarsa</label>
-          <input value="{{$detail_penjualan->kadaluarsa}}" type="text" class="form-control" id="kadaluarsa" aria-describedby="kadaluarsa" name="kadaluarsa">
+          <label for="lunas" class="form-label">lunas</label>
+          <input value="{{$detail_penjualan->lunas}}" type="text" class="form-control" id="lunas" aria-describedby="lunas" name="lunas">
         </div>
         <div class="mb-3">
-          <label for="id_supplier" class="form-label">Supplier</label>
-          <input value="{{$detail_penjualan->id_supplier}}" type="text" class="form-control" id="id_supplier" aria-describedby="id_supplier" name="id_supplier">
+          <label for="id_penjualan" class="form-label">id_penjualan</label>
+          <input value="{{$detail_penjualan->id_penjualan}}" type="text" class="form-control" id="id_penjualan" aria-describedby="id_penjualan" name="id_penjualan">
         </div>
 
         <button type="submit" class="btn btn-primary">Submit</button>
