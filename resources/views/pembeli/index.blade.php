@@ -1,69 +1,6 @@
-@extends('test.layout-test')
-
-
-@section('JudulHalaman', 'Halaman Awal')
-
-@section('IsiHalaman')
-    <div class="container">
-        <h1>Halaman index</h1>
-        @if (session('hasil'))
-
-            <div class="alert alert-warning alert-dismissible fade show" role="alert">
-                <strong>{{ session('hasil') }}</strong>
-                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-            </div>
-        @endif
-        <a class="btn btn-primary" href="{{ route('pembeli.create') }}" role="button">Tambah Barang</a>
-        <table class="table">
-            <thead>
-                <tr>
-                    <th scope="col">No.</th>
-                    <th scope="col">nama</th>
-                    <th scope="col">Alamat</th>
-                    <th scope="col">No. HP</th>
-                    <th>Action</th>
-
-                </tr>
-            </thead>
-            <tbody>
-                @foreach ($data as $item)
-                    <tr>
-                        <th scope="row">{{ $loop->iteration }}</th>
-
-                        <td>{{ $item->nama }}</td>
-                        <td>{{ $item->alamat }}</td>
-                        <td>{{ $item->no_hp }}</td>
-
-
-                        <td>
-                            <a class="btn btn-outline-dark" href="{{ route('pembeli.edit', $item->id) }}"
-                                role="button">Edit</a>
-
-
-                            <form action="{{ route('pembeli.destroy', $item) }}" method="post" class="d-inline-block"
-                                style="margin: 0.4em 0;">
-                                @csrf
-                                @method("delete")
-                                <button type="submit" class="btn btn-bordered btn-danger "
-                                    onclick="return confirm('apakah anda yakin menghapus barang {{ $item->nama_barang }}?');"><i
-                                        class="fa fa-check mr-1"></i>Hapus</button>
-                            </form>
-                        </td>
-
-                    </tr>
-                @endforeach
-
-            </tbody>
-        </table>
-
-    </div>
-@endsection
-
-
-
 @extends('user.template')
 @section('JudulHalaman', 'Toko Mas Woko')
-@section('breadcome', 'Data Supplier')
+@section('breadcome', 'Data Pembeli')
 
 @section('content')
     <div class="data-table-area mg-b-15">
@@ -80,10 +17,10 @@
                                 </div>
                             @endif
                             <div class="main-sparkline13-hd">
-                                <h1>Data Supplier</h1>
+                                <h1>Data Pembeli</h1>
                                 <hr>
                                 <a class="btn btn-primary" href="{{ route('barang.create') }}" role="button">
-                                    Tambah Supplier
+                                    Tambah Pembeli
                                 </a>
                                 <div class="sparkline13-outline-icon">
                                     <span class="sparkline13-collapse-link"><i class="fa fa-chevron-up"></i></span>
@@ -118,27 +55,26 @@
                                             <tr>
                                                 <td></td>
                                                 <td scope="row">{{ $loop->iteration }}</td>
-                                                <td>{{ $item->nama_supplier }}</td>
+                                                <td>{{ $item->nama }}</td>
                                                 <td>{{ $item->alamat }}</td>
                                                 <td>{{ $item->no_hp }}</td>
-                                                <td>{{ $item->catatan }}</td>
                                                 <td class="button-style-three">
                                                     <div class="button-ap-list responsive-btn">
                                                         <div class="btn-group btn-custom-groups">
                                                             <button type="button" class="btn btn-primary">
-                                                                <a href="{{ route('supplier.edit', $item->id) }}"
+                                                                <a href="{{ route('pembeli.edit', $item->id) }}"
                                                                     role="button"></a>
                                                                 <i class="fa fa-edit"></i>
                                                             </button>
 
-                                                            <form action="{{ route('supplier.destroy', $item) }}"
+                                                            <form action="{{ route('pembeli.destroy', $item) }}"
                                                                 method="post" class="d-inline-block"
                                                                 style="margin: 0.4em 0;">
                                                                 @csrf
                                                                 @method("delete")
                                                                 <button type="submit" class="btn btn-primary"
                                                                     onclick="return confirm('apakah anda yakin menghapus barang {{ $item->nama_barang }}?');"><a
-                                                                        href="{{ route('supplier.edit', $item->id) }}"
+                                                                        href="{{ route('pembeli.edit', $item->id) }}"
                                                                         role="button"></a>
                                                                     <i class="fa fa-trash"></i>
                                                                 </button>
