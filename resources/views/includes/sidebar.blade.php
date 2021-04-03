@@ -4,7 +4,7 @@
             <a href="#"><img src="{{ asset('images/logo.png') }}" alt="" style="height: 150px; width: 150px" />
             </a>
             <h3><b>Toko Mas Woko</b></h3>
-            <p><u>Belanja Puas Harga Pas</u></p>
+            <p><b><u>Belanja Puas Harga Pas</u></b></p>
             <strong>AP+</strong>
         </div>
         <div class="left-custom-menu-adp-wrap">
