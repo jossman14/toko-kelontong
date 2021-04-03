@@ -80,7 +80,6 @@
                                                                 @csrf
                                                                 @method("delete")
                                                                 <button type="submit"
-                                                                    class="btn btn-custon-rounded-three btn-danger"
                                                                     onclick="return confirm('apakah anda yakin menghapus barang {{ $item->nama_barang }}?');">
                                                                 </button>
                                                             </form>
