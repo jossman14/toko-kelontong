@@ -62,8 +62,15 @@
                                                 <td>{{ $item->no_hp }}</td>
                                                 <td>{{ $item->catatan }}</td>
                                                 <td class="button-style-three">
-                                                    <a href=""><i class="fas fa-trash"></i></a>
-                                                    <a href=""><i class="fas fa-trash"></i></a>
+                                                    <div class="button-ap-list responsive-btn">
+                                                        <div class="btn-group btn-custom-groups">
+                                                            <button type="button" class="btn btn-primary">Default</button>
+                                                            <button type="button" class="btn btn-primary">Primary</button>
+                                                            <button type="button" class="btn btn-primary">Success</button>
+                                                            <button type="button" class="btn btn-primary">Warning</button>
+                                                            <button type="button" class="btn btn-primary">Danger</button>
+                                                        </div>
+                                                    </div>
                                                     <a class="btn btn-custon-rounded-three btn-success"
                                                         href="{{ route('supplier.edit', $item->id) }}" role="button"><i
                                                             class="fa fa-edit"></i></a>
