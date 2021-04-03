@@ -75,10 +75,8 @@
                                     <span class="sparkline13-collapse-close"><i class="fa fa-times"></i></span>
                                 </div>
                             </div>
-                            <div>
-                                <a class="btn btn-primary" href="{{ route('supplier.create') }}" role="button">Tambah
-                                    Supplier</a>
-                            </div>
+                            <a class="btn btn-primary" href="{{ route('supplier.create') }}" role="button">Tambah
+                                Supplier</a>
                         </div>
                         <div class="sparkline13-graph">
                             <div class="datatable-dashv1-list custom-datatable-overright">
