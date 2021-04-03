@@ -68,9 +68,10 @@
                                                     <div class="button-ap-list responsive-btn">
                                                         <div class="btn-group btn-custom-groups">
                                                             <button type="button" class="btn btn-primary">
-                                                                <a href="{{ route('barang.edit', $item->id) }}"
-                                                                    role="button"></a>
-                                                                <i class="fa fa-edit"></i>
+
+                                                                <i class="fa fa-edit"> <a
+                                                                        href="{{ route('barang.edit', $item->id) }}"
+                                                                        role="button"></a></i>
                                                             </button>
 
                                                             <form action="{{ route('barang.destroy', $item) }}"
@@ -79,7 +80,9 @@
                                                                 @csrf
                                                                 @method("delete")
                                                                 <button type="submit" class="btn btn-primary"
-                                                                    onclick="return confirm('apakah anda yakin menghapus barang {{ $item->nama_barang }}?');">
+                                                                    onclick="return confirm('apakah anda yakin menghapus barang {{ $item->nama_barang }}?');"><a
+                                                                        href="{{ route('barang.edit', $item->id) }}"
+                                                                        role="button"></a>
                                                                     <i class="fa fa-trash"></i>
                                                                 </button>
                                                             </form>
