@@ -36,9 +36,9 @@
                                         <option value="selected">Export Selected</option>
                                     </select>
                                 </div>
-                                <table id="table" data-toggle="table" data-pagination="true" data-search="true"
-                                    data-show-columns="true" data-show-pagination-switch="true" data-show-refresh="true"
-                                    data-key-events="true" data-show-toggle="true" data-resizable="true" data-cookie="true"
+                                <table id="table" data-pagination="true" data-search="true" data-show-columns="true"
+                                    data-show-pagination-switch="true" data-show-refresh="true" data-key-events="true"
+                                    data-show-toggle="true" data-resizable="true" data-cookie="true"
                                     data-cookie-id-table="saveId" data-show-export="true" data-toolbar="#toolbar">
                                     <thead>
                                         <tr>
