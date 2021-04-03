@@ -63,8 +63,8 @@
                                                 <td>{{ $item->catatan }}</td>
                                                 <td class="button-style-three">
                                                     <a class="btn btn-custon-rounded-three btn-success"
-                                                        href="{{ route('supplier.edit', $item->id) }}"
-                                                        role="button">Edit</a>
+                                                        href="{{ route('supplier.edit', $item->id) }}" role="button"><i
+                                                            class="fa fa-edit"></i></a>
                                                     <form action="{{ route('supplier.destroy', $item) }}" method="post"
                                                         class="d-inline-block" style="margin: 0.4em 0;">
                                                         @csrf
@@ -72,7 +72,7 @@
                                                         <button type="submit"
                                                             class="btn btn-custon-rounded-three btn-danger"
                                                             onclick="return confirm('apakah anda yakin menghapus barang {{ $item->nama_barang }}?');"><i
-                                                                class="fa fa-check mr-1"></i>Hapus
+                                                                class="fas fa-trash-alt"></i><i class="fa fa-edit"></i>
                                                         </button>
                                                     </form>
                                                 </td>
