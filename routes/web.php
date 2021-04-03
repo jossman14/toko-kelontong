@@ -34,5 +34,3 @@ Route::resource('/pembeli', 'PembeliController');
 Route::resource('/penjualan', 'PenjualanController');
 Route::resource('/piutang', 'PiutangController');
 Route::resource('/supplier', 'SupplierController');
-
-Route::get('/user/penjualan', 'UserController@transaksi')->name('penjualan');
