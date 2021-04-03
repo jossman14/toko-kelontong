@@ -23,8 +23,6 @@ class DetailPenjualanController extends Controller
 
         // dd($data->all());
 
-
-
         return view('detail-penjualan.index', compact('data'));
     }
 
