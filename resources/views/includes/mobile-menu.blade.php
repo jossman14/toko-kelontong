@@ -31,7 +31,7 @@
                                 </ul>
                             </li>
                             <li>
-                                <a data-toggle="collapse" data-target="#Charts" href="{{ route('penjualan') }}">
+                                <a data-toggle="collapse" data-target="#Charts" href="{{ route('penjualan.index') }}">
                                     Transaksi Penjualan
                                 </a>
                             </li>
