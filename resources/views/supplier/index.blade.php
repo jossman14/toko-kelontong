@@ -11,11 +11,23 @@
                         <div class="sparkline13-hd">
                             <div class="main-sparkline13-hd">
                                 <h1>Data Supplier</h1>
-                                <div class="sparkline13-outline-icon">
-                                    <span class="sparkline13-collapse-link"><i class="fa fa-chevron-up"></i></span>
-                                    <span><i class="fa fa-wrench"></i></span>
-                                    <span class="sparkline13-collapse-close"><i class="fa fa-times"></i></span>
-                                </div>
+                                @if (session('hasil'))
+
+                                    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                                        <strong>{{ session('hasil') }}</strong>
+                                        <button type="button" class="btn-close" data-bs-dismiss="alert"
+                                            aria-label="Close"></button>
+                                    </div>
+                                @endif
+                                <a class="btn btn-primary" href="{{ route('barang.create') }}" role="button">
+                                    Tambah Barang
+                                </a>
+                                <table class="table">
+                                    <div class="sparkline13-outline-icon">
+                                        <span class="sparkline13-collapse-link"><i class="fa fa-chevron-up"></i></span>
+                                        <span><i class="fa fa-wrench"></i></span>
+                                        <span class="sparkline13-collapse-close"><i class="fa fa-times"></i></span>
+                                    </div>
                             </div>
                         </div>
                         <div class="sparkline13-graph">
