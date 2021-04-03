@@ -12,7 +12,7 @@
                             <div class="main-income-head">
                                 <h2>Income</h2>
                                 <div class="main-income-phara">
-                                    <p>Monthly</p>
+                                    <p>Bulan Ini</p>
                                 </div>
                             </div>
                         </div>
@@ -39,7 +39,7 @@
                             <div class="main-income-head">
                                 <h2>Transaksi</h2>
                                 <div class="main-income-phara order-cl">
-                                    <p>Monthly</p>
+                                    <p>Bulan Ini</p>
                                 </div>
                             </div>
                         </div>
@@ -100,7 +100,7 @@
                         <div class="income-dashone-pro">
                             <div class="income-rate-total">
                                 <div class="price-adminpro-rate">
-                                    <h3><span class="counter">3554</span>Orang</h3>
+                                    <h3><span class="counter">3554</span>&nbsp;Orang</h3>
                                 </div>
                                 <div class="price-graph">
                                     <span id="sparkline5"></span>
