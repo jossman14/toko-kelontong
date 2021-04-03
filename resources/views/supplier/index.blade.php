@@ -18,16 +18,12 @@
                             @endif
                             <div class="main-sparkline13-hd">
                                 <h1>Data Supplier</h1>
-
                                 <a class="btn btn-primary" href="{{ route('barang.create') }}" role="button">
                                     Tambah Barang
                                 </a>
-                                <table class="table">
-                                    <div class="sparkline13-outline-icon">
-                                        <span class="sparkline13-collapse-link"><i class="fa fa-chevron-up"></i></span>
-                                        <span><i class="fa fa-wrench"></i></span>
-                                        <span class="sparkline13-collapse-close"><i class="fa fa-times"></i></span>
-                                    </div>
+                                <div class="sparkline13-outline-icon">
+                                    <span class="sparkline13-collapse-link"><i class="fa fa-chevron-up"></i></span>
+                                </div>
                             </div>
                         </div>
                         <div class="sparkline13-graph">
