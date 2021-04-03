@@ -76,7 +76,9 @@ class PiutangController extends Controller
      */
     public function edit(piutang $piutang)
     {
-        return view("piutang.edit", compact("piutang"));
+        $pembeli = pembeli::all();
+        $penjualan = penjualan::all();
+        return view('piutang.edit', compact('pembeli', 'penjualan', 'piutang'));
     }
 
     /**

@@ -13,10 +13,18 @@
         @method("patch")
         {{-- protected $fillable = ['id_pembeli',  'jumlah_total', 'no_hp']; --}}
 
-        <div class="mb-3">
+        {{-- <div class="mb-3">
           <label for="id_pembeli" class="form-label">id_pembeli</label>
           <input value="{{$penjualan->id_pembeli}}" type="text" class="form-control" id="id_pembeli" aria-describedby="id_pembeli" name="id_pembeli">
-        </div>
+        </div> --}}
+
+
+        <select class="form-select my-4" id="id_pembeli" aria-describedby="id_pembeli" name="id_pembeli">
+            <option selected>Pilih Barang</option>
+            @foreach ($pembeli as $item)
+            <option value="{{$item->id}}">{{$item->nama}}</option>
+            @endforeach
+          </select>
         <div class="mb-3">
           <label for="jumlah_total" class="form-label">jumlah_total</label>
           <input value="{{$penjualan->jumlah_total}}" type="text" class="form-control" id="jumlah_total" aria-describedby="jumlah_total" name="jumlah_total">

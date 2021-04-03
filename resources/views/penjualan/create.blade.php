@@ -19,7 +19,6 @@
                 @foreach ($pembeli as $item)
                 <option value="{{$item->id}}">{{$item->nama}}</option>
                 @endforeach
-
               </select>
             <div class="mb-3">
                 <label for="jumlah_total" class="form-label">jumlah_total</label>
