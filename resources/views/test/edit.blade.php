@@ -1,6 +1,11 @@
+<<<<<<< HEAD
 @extends('user.template')
 @section('JudulHalaman', 'Toko Mas Woko')
 @section('breadcome', 'Edit Data Barang')
+=======
+@extends('test.layout-test')
+
+>>>>>>> f2ecd457945c8fef9e80895b62fb364b412e7b2b
 
 @section('content')
     <div class="container-fluid">

@@ -12,4 +12,10 @@ class supplier extends Model
     protected $table = "suppliers";
 
     protected $fillable = ['nama_supplier',  'alamat', "no_hp", "catatan"];
+
+
+    public function barang()
+    {
+        return $this->belongsTo('App\barang', 'id_supplier', 'id');
+    }
 }

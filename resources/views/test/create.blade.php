@@ -1,6 +1,11 @@
+<<<<<<< HEAD
 @extends('user.template')
 @section('JudulHalaman', 'Toko Mas Woko')
 @section('breadcome', 'Data Barang')
+=======
+@extends('test.layout-test')
+
+>>>>>>> f2ecd457945c8fef9e80895b62fb364b412e7b2b
 
 @section('content')
     <div class="container-fluid">
@@ -50,5 +55,32 @@
                 </div>
             </div>
         </div>
+<<<<<<< HEAD
     </div>
+=======
+        <div class="mb-3">
+          <label for="jumlah_stok" class="form-label">Jumlah Stok</label>
+          <input type="text" class="form-control" id="jumlah_stok" aria-describedby="jumlah_stok" name="jumlah_stok">
+        </div>
+        <div class="mb-3">
+          <label for="kadaluarsa" class="form-label">Kadaluarsa</label>
+          <input type="text" class="form-control" id="kadaluarsa" aria-describedby="kadaluarsa" name="kadaluarsa">
+        </div>
+        {{-- <div class="mb-3">
+          <label for="id_supplier" class="form-label">Supplier</label>
+          <input type="text" class="form-control" id="id_supplier" aria-describedby="id_supplier" name="id_supplier">
+        </div> --}}
+
+        <select class="form-select" id="kadaluarsa" aria-describedby="kadaluarsa" name="kadaluarsa">
+            <option selected>Pilih Supplier</option>
+            @foreach ($supplier as $item)
+            <option value="{{$item->id}}">{{$item->nama_supplier}}</option>
+            @endforeach
+
+          </select>
+
+        <button type="submit" class="mt-5 btn btn-primary">Submit</button>
+      </form>
+</div>
+>>>>>>> f2ecd457945c8fef9e80895b62fb364b412e7b2b
 @endsection

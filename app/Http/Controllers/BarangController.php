@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\barang;
+use App\supplier;
 use Illuminate\Http\Request;
 
 class BarangController extends Controller
@@ -19,7 +20,8 @@ class BarangController extends Controller
      */
     public function index()
     {
-        $data = barang::all();
+        $data = barang::with("supplier")->get();
+
 
 
         return view('test.index', compact('data'));
@@ -33,7 +35,8 @@ class BarangController extends Controller
     public function create()
     {
         //mengarah ke halaman tambah barang
-        return view('test.create');
+        $supplier = supplier::all();
+        return view('test.create', compact('supplier'));
     }
 
     /**

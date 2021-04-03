@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\piutang;
+use App\pembeli;
+use App\penjualan;
 
 use Illuminate\Http\Request;
 
@@ -20,7 +22,8 @@ class PiutangController extends Controller
      */
     public function index()
     {
-        $data = piutang::all();
+        $data = piutang::with("pembeli", "penjualan")->get();
+
 
 
         return view('piutang.index', compact('data'));
@@ -34,7 +37,9 @@ class PiutangController extends Controller
     public function create()
     {
         //mengarah ke halaman tambah piutang
-        return view('piutang.create');
+        $pembeli = pembeli::all();
+        $penjualan = penjualan::all();
+        return view('piutang.create', compact('pembeli', 'penjualan'));
     }
 
     /**

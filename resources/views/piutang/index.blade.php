@@ -30,9 +30,8 @@
             @foreach ($data as $item)
             <tr>
                 <th scope="row">{{ $loop->iteration }}</th>
-
-                <td>{{$item->id_pembeli}}</td>
-                <td>{{$item->id_penjualan}}</td>
+                <td>{{$item->pembeli->nama}}</td>
+                <td>{{$item->penjualan->id_pembeli}}</td>
                 <td>{{$item->jumlah_bayar}}</td>
 
 

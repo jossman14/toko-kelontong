@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\pembeli;
 use App\penjualan;
 
 use Illuminate\Http\Request;
@@ -20,7 +21,9 @@ class PenjualanController extends Controller
      */
     public function index()
     {
-        $data = penjualan::all();
+        // $data = penjualan::all();
+        $data = penjualan::with("pembeli")->get();
+
 
 
         return view('penjualan.index', compact('data'));
@@ -34,7 +37,8 @@ class PenjualanController extends Controller
     public function create()
     {
         //mengarah ke halaman tambah penjualan
-        return view('penjualan.create');
+        $pembeli = pembeli::all();
+        return view('penjualan.create', compact('pembeli'));
     }
 
     /**

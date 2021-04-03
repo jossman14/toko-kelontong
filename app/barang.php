@@ -25,4 +25,19 @@ class barang extends Model
     {
         return DB::table('barangs')->when("id", $data)->delete($data);
     }
+
+    public function supplier()
+    {
+        return $this->hasOne('App\supplier', 'id', 'id_supplier');
+    }
+
+    public function detail_penjualan()
+    {
+        return $this->belongsTo('App\detail_penjualan', 'id_barang', 'id');
+    }
+
+    public function gudang()
+    {
+        return $this->belongsTo('App\detail_penjualan', 'id_barang', 'id');
+    }
 }

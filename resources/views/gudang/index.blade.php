@@ -29,7 +29,7 @@
             <tr>
                 <th scope="row">{{ $loop->iteration }}</th>
 
-                <td>{{$item->id_barang}}</td>
+                <td>{{$item->barang->nama_barang}}</td>
                 <td>{{$item->jumlah_barang}}</td>
 
 
