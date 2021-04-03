@@ -9,16 +9,16 @@
                 <div class="col-lg-12">
                     <div class="sparkline13-list shadow-reset">
                         <div class="sparkline13-hd">
+                            @if (session('hasil'))
+                                <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                                    <strong>{{ session('hasil') }}</strong>
+                                    <button type="button" class="btn-close" data-bs-dismiss="alert"
+                                        aria-label="Close"></button>
+                                </div>
+                            @endif
                             <div class="main-sparkline13-hd">
                                 <h1>Data Supplier</h1>
-                                @if (session('hasil'))
 
-                                    <div class="alert alert-warning alert-dismissible fade show" role="alert">
-                                        <strong>{{ session('hasil') }}</strong>
-                                        <button type="button" class="btn-close" data-bs-dismiss="alert"
-                                            aria-label="Close"></button>
-                                    </div>
-                                @endif
                                 <a class="btn btn-primary" href="{{ route('barang.create') }}" role="button">
                                     Tambah Barang
                                 </a>
