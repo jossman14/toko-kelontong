@@ -91,15 +91,11 @@
                                     <thead>
                                         <tr>
                                             <th data-field="state" data-checkbox="true"></th>
-                                            <th data-field="id">ID</th>
-                                            <th data-field="name" data-editable="true">Project</th>
-                                            <th data-field="email" data-editable="true">Email</th>
-                                            <th data-field="phone" data-editable="true">Phone</th>
-                                            <th data-field="company" data-editable="true">Company</th>
-                                            <th data-field="complete">Completed</th>
-                                            <th data-field="task" data-editable="true">Task</th>
-                                            <th data-field="date" data-editable="true">Date</th>
-                                            <th data-field="price" data-editable="true">Price</th>
+                                            <th data-field="id">No.</th>
+                                            <th data-field="name" data-editable="true">Nama Supplier</th>
+                                            <th data-field="email" data-editable="true">alamat</th>
+                                            <th data-field="phone" data-editable="true">no_hp</th>
+                                            <th data-field="company" data-editable="true">catatan</th>
                                             <th data-field="action">Action</th>
                                         </tr>
                                     </thead>
@@ -110,15 +106,38 @@
                                             <td>Web Development</td>
                                             <td>admin@uttara.com</td>
                                             <td>+8801962067309</td>
-                                            <td>Aber Ltd.</td>
-                                            <td class="datatable-ct"><span class="pie">1/6</span>
-                                            </td>
-                                            <td>10%</td>
-                                            <td>Jul 14, 2018</td>
                                             <td>$5455</td>
                                             <td class="datatable-ct"><i class="fa fa-check"></i>
                                             </td>
                                         </tr>
+                                        @foreach ($data as $item)
+                                            <tr>
+                                                <th scope="row">{{ $loop->iteration }}</th>
+
+                                                <td>{{ $item->nama_supplier }}</td>
+                                                <td>{{ $item->alamat }}</td>
+                                                <td>{{ $item->no_hp }}</td>
+                                                <td>{{ $item->catatan }}</td>
+
+
+                                                <td>
+                                                    <a class="btn btn-outline-dark"
+                                                        href="{{ route('supplier.edit', $item->id) }}"
+                                                        role="button">Edit</a>
+
+
+                                                    <form action="{{ route('supplier.destroy', $item) }}" method="post"
+                                                        class="d-inline-block" style="margin: 0.4em 0;">
+                                                        @csrf
+                                                        @method("delete")
+                                                        <button type="submit" class="btn btn-bordered btn-danger "
+                                                            onclick="return confirm('apakah anda yakin menghapus barang {{ $item->nama_barang }}?');"><i
+                                                                class="fa fa-check mr-1"></i>Hapus</button>
+                                                    </form>
+                                                </td>
+
+                                            </tr>
+                                        @endforeach
                                     </tbody>
                                 </table>
                             </div>
