@@ -79,14 +79,11 @@
                                                                     onclick="return confirm('apakah anda yakin menghapus barang {{ $item->nama_barang }}?');"><a
                                                                         href="{{ route('supplier.edit', $item->id) }}"
                                                                         role="button"></a>
-
                                                                     <i class="fa fa-trash"></i>
                                                                 </button>
                                                             </form>
-
                                                         </div>
                                                     </div>
-
                                                 </td>
                                             </tr>
                                         @endforeach
