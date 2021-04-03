@@ -73,7 +73,7 @@
                         <div class="income-dashone-pro">
                             <div class="income-rate-total">
                                 <div class="price-adminpro-rate">
-                                    <h3><span class="counter">4400</span></h3>
+                                    <h3><span class="counter">{{ $barang }}</span></h3>
                                 </div>
                                 <div class="price-graph">
                                     <span id="sparkline2"></span>
