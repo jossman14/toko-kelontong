@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\gudang;
+use App\barang;
 
 use Illuminate\Http\Request;
 
@@ -33,7 +34,8 @@ class GudangController extends Controller
     public function create()
     {
         //mengarah ke halaman tambah gudang
-        return view('gudang.create');
+        $barang = barang::all();
+        return view('gudang.create', compact("barang"));
     }
 
     /**
