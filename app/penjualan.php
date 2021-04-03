@@ -11,4 +11,9 @@ class penjualan extends Model
     protected $table = "penjualans";
 
     protected $fillable = ['id_pembeli',  'jumlah_total'];
+
+    public function detail_penjualan()
+    {
+        return $this->belongsTo('App\detail_penjualan', 'id_penjualan', 'id');
+    }
 }

@@ -30,4 +30,9 @@ class barang extends Model
     {
         return $this->hasOne('App\supplier', 'id', 'id_supplier');
     }
+
+    public function detail_penjualan()
+    {
+        return $this->belongsTo('App\detail_penjualan', 'id_barang', 'id');
+    }
 }

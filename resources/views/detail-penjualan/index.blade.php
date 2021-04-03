@@ -39,7 +39,7 @@
                 <td>{{$item->jumlah_barang}}</td>
                 <td>{{$item->jumlah_harga}}</td>
                 <td>{{$item->lunas}}</td>
-                <td>{{$item->penjualan->id}}</td>
+                <td>{{$item->penjualan->id_pembeli}}</td>
                 <td>
     <a class="btn btn-outline-dark" href="{{route("detail-penjualan.edit", $item->id)}}" role="button">Edit</a>
 

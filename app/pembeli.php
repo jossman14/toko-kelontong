@@ -12,4 +12,9 @@ class pembeli extends Model
     protected $table = "pembelis";
 
     protected $fillable = ['nama',  'alamat', 'no_hp'];
+
+    public function detail_penjualan()
+    {
+        return $this->belongsTo('App\detail_penjualan', 'id_pembeli', 'id');
+    }
 }
