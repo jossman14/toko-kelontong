@@ -77,7 +77,10 @@ class DetailPenjualanController extends Controller
      */
     public function edit(detail_penjualan $detail_penjualan)
     {
-        return view("detail-penjualan.edit", compact("detail_penjualan"));
+        $pembeli = pembeli::all();
+        $barang = barang::all();
+        $penjualan = penjualan::all();
+        return view('detail-penjualan.edit', compact('pembeli', 'barang', 'penjualan', "detail_penjualan"));
     }
 
     /**
