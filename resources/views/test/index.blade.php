@@ -70,8 +70,8 @@
 
 
                                                             <a href="{{ route('barang.edit', $item->id) }}"
-                                                                class="btn btn-primary" role="button"><i
-                                                                    class="fa fa-edit "></i></a>
+                                                                class="btn btn-primary" role="button"><i class="fa fa-edit "
+                                                                    style="color: white"></i></a>
 
                                                             <form action="{{ route('barang.destroy', $item) }}"
                                                                 method="post" class="d-inline-block"
