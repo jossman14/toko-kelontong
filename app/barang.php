@@ -28,6 +28,6 @@ class barang extends Model
 
     public function supplier()
     {
-        return $this->hasOne('App\supplier', 'id_supplier', 'id');
+        return $this->hasOne('App\supplier', 'id', 'id_supplier');
     }
 }

@@ -14,8 +14,8 @@ class supplier extends Model
     protected $fillable = ['nama_supplier',  'alamat', "no_hp", "catatan"];
 
 
-    public function user()
+    public function barang()
     {
-        return $this->belongsTo('App\barang', 'id', 'id_supplier');
+        return $this->belongsTo('App\barang', 'id_supplier', 'id');
     }
 }

@@ -38,7 +38,7 @@
                 <td>{{$item->diskon}}</td>
                 <td>{{$item->jumlah_stok}}</td>
                 <td>{{$item->kadaluarsa}}</td>
-                <td>{{$item->id_supplier}}</td>
+                <td>{{$item->supplier->nama_supplier}}</td>
                 <td>
     <a class="btn btn-outline-dark" href="{{route("barang.edit", $item->id)}}" role="button">Edit</a>
 

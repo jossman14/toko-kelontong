@@ -19,7 +19,8 @@ class BarangController extends Controller
      */
     public function index()
     {
-        $data = barang::all();
+        $data = barang::with("supplier")->get();
+
 
 
         return view('test.index', compact('data'));
