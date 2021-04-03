@@ -20,7 +20,7 @@
                                 <h1>Data Supplier</h1>
                                 <hr>
                                 <a class="btn btn-primary" href="{{ route('barang.create') }}" role="button">
-                                    Tambah Barang
+                                    Tambah Supplier
                                 </a>
                                 <div class="sparkline13-outline-icon">
                                     <span class="sparkline13-collapse-link"><i class="fa fa-chevron-up"></i></span>
