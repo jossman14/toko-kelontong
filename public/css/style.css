@@ -4,5 +4,6 @@ margin-bottom: 5px;
 .mg-b-30{
     margin-bottom: 0;
 }
-.footer-copyright-area{
+.materialdesign .header-top-area, .materialdesign .fixed-header-top{
+     height: 60px;
 }
