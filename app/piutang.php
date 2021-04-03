@@ -12,4 +12,13 @@ class piutang extends Model
     protected $table = "piutangs";
 
     protected $fillable = ['id_pembeli',  'id_penjualan', "jumlah_bayar"];
+
+    public function pembeli()
+    {
+        return $this->hasOne('App\pembeli', 'id', 'id_pembeli');
+    }
+    public function penjualan()
+    {
+        return $this->hasOne('App\penjualan', 'id', 'id_penjualan');
+    }
 }

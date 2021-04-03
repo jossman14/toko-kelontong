@@ -38,7 +38,7 @@ class PenjualanController extends Controller
     {
         //mengarah ke halaman tambah penjualan
         $pembeli = pembeli::all();
-        return view('penjualan.create');
+        return view('penjualan.create', compact('pembeli'));
     }
 
     /**
