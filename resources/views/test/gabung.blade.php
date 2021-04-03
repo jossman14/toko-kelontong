@@ -36,41 +36,41 @@
                                         <option value="selected">Export Selected</option>
                                     </select>
                                 </div>
-                                <table class="table">
+                                <table id="table" data-toggle="table" data-pagination="true" data-search="true"
+                                    data-show-columns="true" data-show-pagination-switch="true" data-show-refresh="true"
+                                    data-key-events="true" data-show-toggle="true" data-resizable="true" data-cookie="true"
+                                    data-cookie-id-table="saveId" data-show-export="true" data-click-to-select="true"
+                                    data-toolbar="#toolbar">
                                     <thead>
                                         <tr>
-                                            <th scope="col">No.</th>
-                                            <th scope="col">Nama Barang</th>
-                                            <th scope="col">Harga</th>
-                                            <th scope="col">Diskon</th>
-                                            <th scope="col">Jumlah Stok</th>
-                                            <th scope="col">Kadaluarsa</th>
-                                            <th scope="col">Supplier</th>
-                                            <th scope="col">Edit</th>
-
+                                            <th data-field="state" data-checkbox="true"></th>
+                                            <th data-field="id">No.</th>
+                                            <th data-field="name" data-editable="true">Nama Supplier</th>
+                                            <th data-field="email" data-editable="true">alamat</th>
+                                            <th data-field="phone" data-editable="true">no_hp</th>
+                                            <th data-field="company" data-editable="true">catatan</th>
+                                            <th data-field="action">Action</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         @foreach ($data as $item)
                                             <tr>
-                                                <th scope="row">{{ $loop->iteration }}</th>
-
-                                                <td>{{ $item->nama_barang }}</td>
-                                                <td>{{ $item->harga }}</td>
-                                                <td>{{ $item->diskon }}</td>
-                                                <td>{{ $item->jumlah_stok }}</td>
-                                                <td>{{ $item->kadaluarsa }}</td>
-                                                <td>{{ $item->id_supplier }}</td>
+                                                <td></td>
+                                                <td scope="row">{{ $loop->iteration }}</td>
+                                                <td>{{ $item->nama_supplier }}</td>
+                                                <td>{{ $item->alamat }}</td>
+                                                <td>{{ $item->no_hp }}</td>
+                                                <td>{{ $item->catatan }}</td>
                                                 <td class="button-style-three">
                                                     <div class="button-ap-list responsive-btn">
                                                         <div class="btn-group btn-custom-groups">
                                                             <button type="button" class="btn btn-primary">
-                                                                <a href="{{ route('barang.edit', $item->id) }}"
+                                                                <a href="{{ route('supplier.edit', $item->id) }}"
                                                                     role="button"></a>
                                                                 <i class="fa fa-edit"></i>
                                                             </button>
 
-                                                            <form action="{{ route('barang.destroy', $item) }}"
+                                                            <form action="{{ route('supplier.destroy', $item) }}"
                                                                 method="post" class="d-inline-block"
                                                                 style="margin: 0.4em 0;">
                                                                 @csrf
@@ -87,7 +87,6 @@
                                                 </td>
                                             </tr>
                                         @endforeach
-
                                     </tbody>
                                 </table>
                             </div>
