@@ -91,7 +91,7 @@
                     <div class="income-dashone-total user-monthly shadow-reset nt-mg-b-30">
                         <div class="income-title">
                             <div class="main-income-head">
-                                <h2>Pelanggan</h2>
+                                <h2>Pembeli</h2>
                                 <div class="main-income-phara low-value-cl">
                                     <p>Bulan Ini</p>
                                 </div>
@@ -100,7 +100,7 @@
                         <div class="income-dashone-pro">
                             <div class="income-rate-total">
                                 <div class="price-adminpro-rate">
-                                    <h3><span class="counter">3554</span>&nbsp;Orang</h3>
+                                    <h3><span class="counter">{{ $pembeli }} </span>&nbsp;Orang</h3>
                                 </div>
                                 <div class="price-graph">
                                     <span id="sparkline5"></span>
