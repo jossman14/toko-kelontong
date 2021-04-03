@@ -103,7 +103,7 @@
                                         @foreach ($data as $item)
                                             <tr>
                                                 <td></td>
-                                                <th scope="row">{{ $loop->iteration }}</th>
+                                                <td scope="row">{{ $loop->iteration }}</td>
                                                 <td>{{ $item->nama_supplier }}</td>
                                                 <td>{{ $item->alamat }}</td>
                                                 <td>{{ $item->no_hp }}</td>
@@ -112,18 +112,16 @@
                                                     <a class="btn btn-outline-dark"
                                                         href="{{ route('supplier.edit', $item->id) }}"
                                                         role="button">Edit</a>
-
-
                                                     <form action="{{ route('supplier.destroy', $item) }}" method="post"
                                                         class="d-inline-block" style="margin: 0.4em 0;">
                                                         @csrf
                                                         @method("delete")
                                                         <button type="submit" class="btn btn-bordered btn-danger "
                                                             onclick="return confirm('apakah anda yakin menghapus barang {{ $item->nama_barang }}?');"><i
-                                                                class="fa fa-check mr-1"></i>Hapus</button>
+                                                                class="fa fa-check mr-1"></i>Hapus
+                                                        </button>
                                                     </form>
                                                 </td>
-
                                             </tr>
                                         @endforeach
                                     </tbody>
