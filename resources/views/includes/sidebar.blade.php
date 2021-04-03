@@ -10,7 +10,8 @@
         <div class="left-custom-menu-adp-wrap">
             <ul class="nav navbar-nav left-sidebar-menu-pro">
                 <li class="nav-item">
-                    <a href="/user/transaksi" role="button" aria-expanded="false" class="nav-link dropdown-toggle">
+                    <a href="{{ route('home') }}" role="button" aria-expanded="false"
+                        class="nav-link dropdown-toggle">
                         <i class="fa big-icon fa-home"></i>
                         <span class="mini-dn">Home</span>
                     </a>
