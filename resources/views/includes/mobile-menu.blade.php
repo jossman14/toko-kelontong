@@ -20,13 +20,13 @@
                                         <a href="inbox.html">User</a>
                                     </li>
                                     <li>
-                                        <a href="view-mail.html">Barang</a>
+                                        <a href="{{ route('barang.index') }} ">Barang</a>
                                     </li>
                                     <li>
-                                        <a href="compose-mail.html">Pembeli</a>
+                                        <a href="{{ route('pembeli.index') }}">Pembeli</a>
                                     </li>
                                     <li>
-                                        <a href="compose-mail.html">Supplier</a>
+                                        <a href="{{ route('supplier.index') }}">Supplier</a>
                                     </li>
                                 </ul>
                             </li>
