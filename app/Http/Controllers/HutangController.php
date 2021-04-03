@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\hutang;
+use App\pembeli;
+use App\penjualan;
 
 use Illuminate\Http\Request;
 
@@ -33,7 +35,9 @@ class HutangController extends Controller
     public function create()
     {
         //mengarah ke halaman tambah hutang
-        return view('hutang.create');
+        $pembeli = pembeli::all();
+        $penjualan = penjualan::all();
+        return view('hutang.create', compact('pembeli', 'penjualan'));
     }
 
     /**
