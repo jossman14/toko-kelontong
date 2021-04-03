@@ -8,7 +8,6 @@
     <h1>Tambah Barang</h1>
     <form method="POST" action="{{route('detail-penjualan.store')}}">
         @csrf
-        protected $fillable = ['id_pembeli',  'id_barang',  'jumlah_barang', 'jumlah_harga', 'lunas','id_penjualan'];
 
 
         <div class="mb-3">
