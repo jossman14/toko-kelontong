@@ -20,7 +20,7 @@ class UserController extends Controller
         $barang = barang::all()->count();
         $pembeli = pembeli::all()->count();
         $penjualan = penjualan::all()->count();
-        return view('user.home', compact('barang', 'pembeli'));
+        return view('user.home', compact('barang', 'pembeli', 'penjualan'));
     }
     public function transaksi()
     {

@@ -46,7 +46,7 @@
                         <div class="income-dashone-pro">
                             <div class="income-rate-total">
                                 <div class="price-adminpro-rate">
-                                    <h3><span class="counter">72320</span></h3>
+                                    <h3><span class="counter">{{ $penjualan }} </span>&nbsp;Transaksi</h3>
                                 </div>
                                 <div class="price-graph">
                                     <span id="sparkline6"></span>
