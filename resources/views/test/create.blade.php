@@ -30,12 +30,20 @@
           <label for="kadaluarsa" class="form-label">Kadaluarsa</label>
           <input type="text" class="form-control" id="kadaluarsa" aria-describedby="kadaluarsa" name="kadaluarsa">
         </div>
-        <div class="mb-3">
+        {{-- <div class="mb-3">
           <label for="id_supplier" class="form-label">Supplier</label>
           <input type="text" class="form-control" id="id_supplier" aria-describedby="id_supplier" name="id_supplier">
-        </div>
+        </div> --}}
 
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <select class="form-select" id="kadaluarsa" aria-describedby="kadaluarsa" name="kadaluarsa">
+            <option selected>Pilih Supplier</option>
+            @foreach ($supplier as $item)
+            <option value="{{$item->id}}">{{$item->nama_supplier}}</option>
+            @endforeach
+
+          </select>
+
+        <button type="submit" class="mt-5 btn btn-primary">Submit</button>
       </form>
 </div>
 @endsection
