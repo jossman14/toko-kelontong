@@ -19,7 +19,7 @@
                         <div class="income-dashone-pro">
                             <div class="income-rate-total">
                                 <div class="price-adminpro-rate">
-                                    <h3><span>$</span><span class="counter">60888200</span></h3>
+                                    <h3><span>Rp</span><span class="counter">5000000</span></h3>
                                 </div>
                                 <div class="price-graph">
                                     <span id="sparkline1"></span>
@@ -27,7 +27,7 @@
                             </div>
                             <div class="income-range">
                                 <p>Total income</p>
-                                <span class="income-percentange">98% <i class="fa fa-bolt"></i></span>
+                                <span class="income-percentange">95% <i class="fa fa-bolt"></i></span>
                             </div>
                             <div class="clear"></div>
                         </div>
@@ -37,7 +37,7 @@
                     <div class="income-dashone-total orders-monthly shadow-reset nt-mg-b-30">
                         <div class="income-title">
                             <div class="main-income-head">
-                                <h2>Orders</h2>
+                                <h2>Barang</h2>
                                 <div class="main-income-phara order-cl">
                                     <p>Annual</p>
                                 </div>
