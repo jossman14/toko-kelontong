@@ -5,10 +5,11 @@
 @section('content')
     <div class="container-fluid">
         <div class="row">
-            <div class="container-fluid col-lg-6 col-md-6 col-sm-12">
-                sdsd
+            <div class="col-lg-6">
+                <div class="dashtwo-order-list">
+                    sdsd</div>
             </div>
-            <div class="container-fluid col-lg-6 col-md-6 col-sm-12">sds</div>
+            <div class="col-lg-6">sds</div>
         </div>
     </div>
 @endsection
