@@ -17,8 +17,12 @@
                             </div>
                             <div class="container">
                                 <div class="row">
-                                    <div class="col-lg-6 dashtwo-order-list content-transaksi">fdfas</div>
-                                    <div class="col-lg-6 dashtwo-order-list content-transaksi">afsda</div>
+                                    <div class="col-lg-6 content-transaksi">
+                                        <div class="dashtwo-order-list">fdfas</div>
+                                    </div>
+                                    <div class="col-lg-6 content-transaksi">
+                                        <div class="dashtwo-order-list">fdfas</div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
