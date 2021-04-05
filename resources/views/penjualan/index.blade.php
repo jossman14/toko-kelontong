@@ -6,7 +6,9 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-lg-12 judul-transaksi">
-                <h4>Transaksi Kasir</h4>
+                <div class="dashtwo-order-list">
+                    <h4>Transaksi Penjualan</h4>
+                </div>
             </div>
         </div>
         <div class="row">
