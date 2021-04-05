@@ -15,10 +15,10 @@
                                     <span class="sparkline13-collapse-link"><i class="fa fa-chevron-up"></i></span>
                                 </div>
                             </div>
-                            <div class="content-transaksi">
+                            <div class="">
                                 <div class="row">
-                                    <div class="col-lg-6">fdfas</div>
-                                    <div class="col-lg-6">afsda</div>
+                                    <div class="col-lg-6 content-transaksi">fdfas</div>
+                                    <div class="col-lg-6 content-transaksi">afsda</div>
                                 </div>
                             </div>
                         </div>
