@@ -22,7 +22,27 @@
                                         <div class="form-group-inner">
                                             <div class="row">
                                                 <div class="col-lg-3">
-                                                    <label class="login2 pull-right pull-right-pro">No. Nota</label>
+                                                    <label class="login2 pull-right pull-right-pro">No. Note</label>
+                                                </div>
+                                                <div class="col-lg-9">
+                                                    <input type="text" class="form-control" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group-inner">
+                                            <div class="row">
+                                                <div class="col-lg-3">
+                                                    <label class="login2 pull-right pull-right-pro">Pelanggan</label>
+                                                </div>
+                                                <div class="col-lg-9">
+                                                    <input type="text" class="form-control" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group-inner">
+                                            <div class="row">
+                                                <div class="col-lg-3">
+                                                    <label class="login2 pull-right pull-right-pro">Tanggal</label>
                                                 </div>
                                                 <div class="col-lg-9">
                                                     <input type="text" class="form-control" />
@@ -31,16 +51,7 @@
                                         </div>
                                     </div>
                                     <div class="col-sm content-transaksi">
-                                        <div class="form-group-inner">
-                                            <div class="row">
-                                                <div class="col-lg-3">
-                                                    <label class="login2 pull-right pull-right-pro">Normal</label>
-                                                </div>
-                                                <div class="col-lg-9">
-                                                    <input type="text" class="form-control" />
-                                                </div>
-                                            </div>
-                                        </div>
+                                        One of three columns
                                     </div>
                                 </div>
                             </div>
