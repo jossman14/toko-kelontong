@@ -14,12 +14,7 @@ margin-left: 10px;
 .materialdesign .header-top-area, .materialdesign .fixed-header-top{
      height: 60px;
 }
-.judul-transaksi{
-    margin-bottom: 5px;
-}
-.judul-transaksi .dashtwo-order-list{
-    padding: 2px;
-}
 .content-transaksi{
     background-color: #ebebeb;
+    margin-right: 10px;
 }

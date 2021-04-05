@@ -9,19 +9,20 @@
                 <div class="col-lg-12">
                     <div class="sparkline13-list shadow-reset">
                         <div class="sparkline13-hd">
-                            <div class="main-sparkline13-hd">
+                            <div class="main-sparkline13-hd judul-transaksi">
                                 <h1>Transaksi Penjualan</h1>
+                                <hr>
                                 <div class="sparkline13-outline-icon">
                                     <span class="sparkline13-collapse-link"><i class="fa fa-chevron-up"></i></span>
                                 </div>
                             </div>
                             <div class="container">
                                 <div class="row">
-                                    <div class="col-lg-6 content-transaksi">
-                                        <div class="shadow-reset">fdfas</div>
+                                    <div class="col-sm content-transaksi">
+                                        One of three columns
                                     </div>
-                                    <div class="col-lg-6 content-transaksi">
-                                        <div class="shadow-reset">fdfas</div>
+                                    <div class="col-sm content-transaksi">
+                                        One of three columns
                                     </div>
                                 </div>
                             </div>
