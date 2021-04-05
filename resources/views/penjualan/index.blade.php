@@ -55,7 +55,7 @@
                                             </form>
                                         </div>
                                     </div>
-                                    <div class="col-sm content-transaksi">
+                                    <div class="col-sm content-transaks     i">
                                         One of three columns
                                     </div>
                                 </div>
