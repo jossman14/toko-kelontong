@@ -6,7 +6,10 @@
                     <div class="row">
                         <div class="col-lg-6">
                             <div class="breadcome-heading">
-
+                                <ul class="breadcome-menu">
+                                    <li><a href="#">Home</a> <span class="bread-slash">/</span>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
                         <div class="col-lg-6">
